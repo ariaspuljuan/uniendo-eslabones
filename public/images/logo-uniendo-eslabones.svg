@@ -1,0 +1,8 @@
+<svg width="376" height="88" viewBox="0 0 376 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="376" height="88" rx="18" fill="#FFFFFF"/>
+  <circle cx="44" cy="44" r="30" fill="#3365BB"/>
+  <path d="M27 48C37 37 49 34 62 41C55 49 45 55 27 48Z" fill="#DDE8CF"/>
+  <path d="M31 55C45 50 58 51 68 58" stroke="#FFB500" stroke-width="5" stroke-linecap="round"/>
+  <text x="90" y="39" fill="#13233F" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">Uniendo</text>
+  <text x="90" y="64" fill="#5DC511" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">Eslabones</text>
+</svg>
