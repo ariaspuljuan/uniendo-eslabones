@@ -29,16 +29,16 @@ export const products: Product[] = [
     shortDescription:
       "Bandas elásticas deportivas fabricadas en caucho natural colombiano, ideales para entrenamiento, rehabilitación y acondicionamiento físico, con diferentes niveles de resistencia.",
     location: "Medellín, Colombia",
-    provider: "Cauchos Echeverri - Ruberfit",
+    provider: "Cauchos Echeverri - Rubberfit",
     category: "industria",
     isNaturalRubber: true,
-    image: "/images_products/bandas-ruber-fit.png",
+    image: "/images_products/bandas-rubber-fit.png",
   },
   {
     id: "4",
-    name: "Bandas Elasticas",
+    name: "Bandas elásticas",
     shortDescription:
-      "Ligas elásticas fabricadas en caucho natural colombiano, diseñadas para ofrecer resistencia, flexibilidad y durabilidad en aplicaciones de oficina, industria, comercio y organización de productos.",
+      "Las ligas elásticas son productos elaborados con base en caucho natural, utilizadas ampliamente para sujetar, organizar y asegurar diferentes tipos de materiales. Gracias a su elasticidad y resistencia son ideales para usos cotidianos e industriales.",
     location: "Medellín, Colombia",
     provider: "Cauchos Echeverri",
     category: "industria",
