@@ -33,11 +33,11 @@ export function ImpactSection() {
               Cadena viva
             </span>
             <h2 className="mt-4 text-4xl font-black tracking-tight text-[var(--color-text)] md:text-6xl">
-              Una lectura rapida del ecosistema cauchero.
+              Una lectura rápida del ecosistema
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-[var(--color-muted)]">
               El usuario entiende en segundos donde esta el valor: origen,
-              transformacion, aliados, noticias y mercado.
+              transformación, aliados, noticias y mercado.
             </p>
           </div>
 

@@ -36,7 +36,7 @@ export const products: Product[] = [
   },
   {
     id: "4",
-    name: "Bandas elásticas",
+    name: "Bandas elásticas          ",
     shortDescription:
       "Las ligas elásticas son productos elaborados con base en caucho natural, utilizadas ampliamente para sujetar, organizar y asegurar diferentes tipos de materiales. Gracias a su elasticidad y resistencia son ideales para usos cotidianos e industriales.",
     location: "Medellín, Colombia",

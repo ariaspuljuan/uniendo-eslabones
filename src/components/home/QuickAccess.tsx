@@ -43,15 +43,15 @@ export function QuickAccess() {
         <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
             <span className="text-sm font-black uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
-              Flujo de informacion
+              Flujo de información
             </span>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-[var(--color-text)] md:text-5xl">
-              Menos ruido. Mas conexion entre actores.
+              Más conexión entre actores.
             </h2>
           </div>
           <p className="text-base leading-7 text-[var(--color-muted)]">
             El home funciona como tablero inicial: dirige al usuario hacia
-            productos, aliados y noticias sin perder energia visual ni claridad.
+            productos, aliados y noticias sin perder energía visual ni claridad.
           </p>
         </div>
 
@@ -91,7 +91,7 @@ export function QuickAccess() {
                 {item.text}
               </p>
               <span className="mt-6 inline-flex font-black text-[var(--color-accent)]">
-                Abrir seccion -&gt;
+                Abrir sección -&gt;
               </span>
             </Link>
           ))}
