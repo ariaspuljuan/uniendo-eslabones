@@ -5,15 +5,15 @@ import { useEffect, useState } from "react";
 
 export const heroSlides = [
   {
-    src: "/images/hero-slide-1.svg",
+    src: "/images/hero-slide-1.png",
     alt: "Cultivo de caucho natural en Colombia",
   },
   {
-    src: "/images/hero-slide-2.svg",
+    src: "/images/hero-slide-2.png",
     alt: "Latex y proceso productivo del caucho",
   },
   {
-    src: "/images/hero-slide-3.svg",
+    src: "/images/hero-slide-3.png",
     alt: "Industria y transformacion del caucho natural",
   },
 ];

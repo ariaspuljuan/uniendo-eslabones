@@ -12,15 +12,15 @@ const navItems = [
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-[color:var(--color-border)] bg-[color-mix(in_srgb,var(--color-bg)_88%,transparent)] backdrop-blur-xl">
-      <div className="mx-auto flex min-h-20 max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-6">
+      <div className="mx-auto flex min-h-24 max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/logo-uniendo-eslabones.svg"
+            src="/images/logo_full_uniendo_eslabones.webp"
             alt="Uniendo Eslabones"
-            width={188}
-            height={44}
+            width={300}
+            height={120}
             priority
-            className="h-11 w-auto"
+            className="h-16 w-auto"
           />
         </Link>
 

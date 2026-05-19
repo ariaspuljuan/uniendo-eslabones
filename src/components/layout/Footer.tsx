@@ -8,11 +8,11 @@ export function Footer() {
         <div>
           <Link href="/" className="inline-flex">
             <Image
-              src="/images/logo-uniendo-eslabones.svg"
+              src="/images/logo_full_uniendo_eslabones.webp"
               alt="Uniendo Eslabones"
-              width={188}
-              height={44}
-              className="h-11 w-auto"
+              width={559}
+              height={224}
+              className="h-16 w-auto"
             />
           </Link>
           <p className="mt-4 max-w-md text-sm leading-6 text-[var(--color-muted)]">
