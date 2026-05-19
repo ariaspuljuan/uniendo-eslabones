@@ -16,11 +16,11 @@
   --color-warning: #ffb500;
   --color-hero-overlay: linear-gradient(
     90deg,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0.95) 38%,
-    rgba(255, 255, 255, 0.64) 100%
+    rgba(255, 255, 255, 0.84) 0%,
+    rgba(255, 255, 255, 0.64) 40%,
+    rgba(255, 255, 255, 0.18) 100%
   );
-  --color-hero-bottom: linear-gradient(to top, #ffffff, transparent);
+  --color-hero-bottom: linear-gradient(to top, rgba(255, 255, 255, 0.78), transparent);
   --shadow-card: 0 24px 80px rgba(51, 101, 187, 0.12);
 }
 
@@ -40,11 +40,11 @@
   --color-warning: #ffb500;
   --color-hero-overlay: linear-gradient(
     90deg,
-    #071426 0%,
-    rgba(7, 20, 38, 0.9) 38%,
-    rgba(51, 101, 187, 0.28) 100%
+    rgba(7, 20, 38, 0.78) 0%,
+    rgba(7, 20, 38, 0.62) 40%,
+    rgba(51, 101, 187, 0.16) 100%
   );
-  --color-hero-bottom: linear-gradient(to top, #071426, transparent);
+  --color-hero-bottom: linear-gradient(to top, rgba(7, 20, 38, 0.72), transparent);
   --shadow-card: 0 28px 90px rgba(0, 0, 0, 0.32);
 }
 

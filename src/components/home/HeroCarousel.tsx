@@ -40,7 +40,7 @@ export function HeroCarousel() {
           height={1080}
           priority={index === 0}
           className={`absolute inset-0 -z-30 h-full w-full object-cover transition-opacity duration-1000 ${
-            activeSlide === index ? "opacity-55" : "opacity-0"
+            activeSlide === index ? "opacity-80" : "opacity-0"
           }`}
         />
       ))}
