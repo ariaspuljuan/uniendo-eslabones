@@ -1,43 +1,57 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const items = [
   {
-    title: "Productos destacados",
-    text: "Explora referencias listas para conectar proveedores, industrias y compradores.",
+    title: "Oferta productiva",
+    text: "Productos, proveedores, regiones y capacidades listas para ser consultadas por compradores y aliados.",
     href: "/productos",
     label: "Catalogo",
+    color: "bg-[var(--color-accent)]",
+    icon: (
+      <path d="M4 8h16v10H4V8Zm3-4h10l3 4H4l3-4Zm2 8h6M9 15h4" />
+    ),
   },
   {
-    title: "Mapa de aliados",
-    text: "Agrupa gremios, asociaciones y actores clave de la cadena productiva.",
+    title: "Red de aliados",
+    text: "Gremios, asociaciones, instituciones y transformadores conectados en un mapa sectorial.",
     href: "/gremios",
-    label: "Red sectorial",
+    label: "Red",
+    color: "bg-[var(--color-highlight)]",
+    icon: (
+      <path d="M12 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-7 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm14 0a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-9-4-3 5m7-5 3 5M8 17h8" />
+    ),
   },
   {
-    title: "Radar de noticias",
-    text: "Publica avances, convocatorias, eventos y contenidos de valor para el sector.",
+    title: "Radar de informacion",
+    text: "Noticias, convocatorias, tendencias y eventos para mantener activo el flujo de conocimiento.",
     href: "/noticias",
-    label: "Actualidad",
+    label: "Noticias",
+    color: "bg-[var(--color-warning)]",
+    icon: (
+      <path d="M5 5h14v14H5V5Zm3 4h8M8 12h8M8 15h5" />
+    ),
   },
 ];
 
 export function QuickAccess() {
   return (
-    <section className="bg-[var(--color-bg)] py-20">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+    <section className="relative overflow-hidden bg-[var(--color-bg)] py-20">
+      <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-[var(--color-warning)]/20 blur-3xl" />
+      <div className="pointer-events-none absolute right-0 bottom-10 h-72 w-72 rounded-full bg-[var(--color-highlight)]/20 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
             <span className="text-sm font-black uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
-              Accesos rapidos
+              Flujo de informacion
             </span>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-[var(--color-text)] md:text-5xl">
-              Entra directo a lo importante
+              Menos ruido. Mas conexion entre actores.
             </h2>
           </div>
-          <p className="max-w-xl text-sm leading-6 text-[var(--color-muted)]">
-            Una portada pensada como plataforma: cada bloque debe llevar a una
-            accion clara y a contenido que pueda crecer.
+          <p className="text-base leading-7 text-[var(--color-muted)]">
+            El home funciona como tablero inicial: dirige al usuario hacia
+            productos, aliados y noticias sin perder energia visual ni claridad.
           </p>
         </div>
 
@@ -46,30 +60,39 @@ export function QuickAccess() {
             <Link
               key={item.title}
               href={item.href}
-              className="group relative min-h-[330px] overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]"
+              className="group rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1"
             >
-              <Image
-                src="/images/producto-demo.svg"
-                alt=""
-                width={560}
-                height={320}
-                className="absolute inset-0 h-full w-full object-cover opacity-45 transition duration-500 group-hover:scale-105 group-hover:opacity-65"
-              />
-              <div className="image-card-overlay absolute inset-0" />
-              <div className="relative flex h-full min-h-[330px] flex-col justify-end p-6">
-                <span className="mb-3 w-fit rounded-full bg-[var(--color-warning)] px-3 py-1 text-xs font-black uppercase tracking-wide text-[#13233f]">
+              <div className="flex items-start justify-between gap-4">
+                <span
+                  className={`flex h-14 w-14 items-center justify-center rounded-2xl ${item.color} text-white shadow-lg`}
+                >
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="h-7 w-7"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                  >
+                    {item.icon}
+                  </svg>
+                </span>
+                <span className="rounded-full bg-[var(--color-accent-soft)] px-3 py-1 text-xs font-black uppercase tracking-wide text-[var(--color-accent-strong)]">
                   {item.label}
                 </span>
-                <h3 className="text-2xl font-black text-white">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-200">
-                  {item.text}
-                </p>
-                <span className="mt-5 text-sm font-black uppercase tracking-wide text-white">
-                  Abrir seccion -&gt;
-                </span>
               </div>
+
+              <h3 className="mt-8 text-2xl font-black text-[var(--color-text)]">
+                {item.title}
+              </h3>
+              <p className="mt-4 min-h-[96px] text-sm leading-6 text-[var(--color-muted)]">
+                {item.text}
+              </p>
+              <span className="mt-6 inline-flex font-black text-[var(--color-accent)]">
+                Abrir seccion -&gt;
+              </span>
             </Link>
           ))}
         </div>
