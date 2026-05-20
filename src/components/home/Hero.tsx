@@ -28,14 +28,14 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="max-w-5xl text-5xl font-black leading-[0.96] tracking-tight text-[var(--color-text)] sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-5xl text-5xl font-black leading-[0.96] tracking-tight text-white drop-shadow-[0_10px_28px_rgba(0,0,0,0.62)] sm:text-6xl lg:text-7xl">
             Uniendo cada eslabón de la cadena del{" "}
             <span className="text-[var(--color-highlight)]">
               caucho natural
             </span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--color-muted)] sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-white drop-shadow-[0_5px_16px_rgba(0,0,0,0.62)] sm:text-xl">
             Una plataforma viva para conectar productos, gremios, noticias,
             regiones y oportunidades en un solo flujo de informacion sectorial.
           </p>
