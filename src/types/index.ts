@@ -51,11 +51,16 @@ export type Organization = {
 
 export type NewsItem = {
   id: string;
+  type: "noticia" | "anuncio";
+  category: "sector" | "productos" | "eventos" | "convocatorias";
   title: string;
   summary: string;
   source: string;
   date: string;
   image: string;
+  banner: string;
   externalUrl: string;
   featured?: boolean;
+  urgent?: boolean;
+  ctaLabel: string;
 };
