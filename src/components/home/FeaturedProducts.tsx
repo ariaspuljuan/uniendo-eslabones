@@ -25,9 +25,10 @@ export function FeaturedProducts() {
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
-            <article
+            <Link
               key={product.id}
-              className="group overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]"
+              href={`/productos/${product.slug}`}
+              className="group flex h-full min-h-[560px] flex-col overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] transition hover:-translate-y-1"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
@@ -42,18 +43,18 @@ export function FeaturedProducts() {
                   {product.isNaturalRubber ? "Natural" : "Reciclado"}
                 </span>
               </div>
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <h3 className="text-lg font-black text-[var(--color-text)]">
                   {product.name}
                 </h3>
-                <p className="mt-2 line-clamp-3 text-sm leading-6 text-[var(--color-muted)]">
+                <p className="mt-2 line-clamp-4 flex-1 text-sm leading-6 text-[var(--color-muted)]">
                   {product.shortDescription}
                 </p>
                 <p className="mt-4 text-sm font-bold text-[var(--color-highlight)]">
                   {product.location}
                 </p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { products } from "@/data/products";
 
 const categories = ["Todos", "Natural", "Industrial", "Asociaciones"];
@@ -35,9 +36,10 @@ export default function ProductosPage() {
       <section className="py-16">
         <div className="mx-auto grid max-w-7xl gap-6 px-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
-            <article
+            <Link
               key={product.id}
-              className="group overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]"
+              href={`/productos/${product.slug}`}
+              className="group flex h-full min-h-[620px] flex-col overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] transition hover:-translate-y-1"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
@@ -53,21 +55,26 @@ export default function ProductosPage() {
                 </span>
               </div>
 
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <p className="text-xs font-black uppercase tracking-wide text-[var(--color-highlight)]">
                   {product.provider}
                 </p>
                 <h2 className="mt-2 text-xl font-black text-[var(--color-text)]">
                   {product.name}
                 </h2>
-                <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">
+                <p className="mt-3 line-clamp-5 flex-1 text-sm leading-6 text-[var(--color-muted)]">
                   {product.shortDescription}
                 </p>
-                <p className="mt-5 text-sm font-bold text-[var(--color-text)]">
-                  {product.location}
-                </p>
+                <div className="mt-5 border-t border-[color:var(--color-border)] pt-4">
+                  <p className="text-sm font-bold text-[var(--color-text)]">
+                    {product.location}
+                  </p>
+                  <span className="mt-3 inline-flex text-sm font-black text-[var(--color-accent)]">
+                    Ver detalle -&gt;
+                  </span>
+                </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>

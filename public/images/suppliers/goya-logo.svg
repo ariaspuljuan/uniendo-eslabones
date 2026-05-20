@@ -1,0 +1,6 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="240" rx="40" fill="#FFF4CC"/>
+  <rect x="55" y="55" width="130" height="130" rx="30" fill="#FFB500"/>
+  <path d="M83 120H157M120 83V157" stroke="#3365BB" stroke-width="18" stroke-linecap="round"/>
+  <text x="120" y="211" text-anchor="middle" fill="#13233F" font-family="Arial" font-size="24" font-weight="800">GOYA</text>
+</svg>
