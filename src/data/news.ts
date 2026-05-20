@@ -70,7 +70,7 @@ export const newsItems: NewsItem[] = [
     source: "Uniendo Eslabones",
     date: "2026-05-20",
     image: "/images/news/4.png",
-    banner: "/images/news/4.png",
+    banner: "/images/news/5.png",
     externalUrl: "https://confecaucho.com/2026/04/20/ya-puedes-nuestra-edicion-no-10-de-la-revista-digital-uniendo-eslabones/",
     ctaLabel: "Leer revista",
   },
