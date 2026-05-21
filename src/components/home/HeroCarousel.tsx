@@ -45,7 +45,7 @@ export function HeroCarousel() {
         />
       ))}
 
-      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+      <div className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 gap-2 sm:bottom-8">
         {heroSlides.map((slide, index) => (
           <button
             key={slide.src}

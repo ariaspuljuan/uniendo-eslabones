@@ -16,12 +16,12 @@ const allies = [
 export default function GremiosPage() {
   return (
     <main className="bg-[var(--color-bg)] text-[var(--color-text)]">
-      <section className="page-hero-gradient border-b border-[color:var(--color-border)] py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="page-hero-gradient border-b border-[color:var(--color-border)] py-24 sm:py-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <span className="text-sm font-black uppercase tracking-[0.22em] text-[var(--color-accent-strong)]">
             Red sectorial
           </span>
-          <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
+          <h1 className="mt-4 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
             Gremios y aliados para conectar capacidades.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">
@@ -32,7 +32,7 @@ export default function GremiosPage() {
       </section>
 
       <section className="py-16">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:px-6 md:grid-cols-3">
           {allies.map((ally) => (
             <article
               key={ally.name}

@@ -4,14 +4,14 @@ import { products } from "@/data/products";
 
 export function FeaturedProducts() {
   return (
-    <section className="bg-[var(--color-bg)] py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-[var(--color-bg)] py-14 sm:py-20">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <span className="text-sm font-black uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
               Catalogo
             </span>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-[var(--color-text)] md:text-5xl">
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-[var(--color-text)] sm:text-4xl md:text-5xl">
               Productos en vitrina
             </h2>
           </div>
@@ -28,7 +28,7 @@ export function FeaturedProducts() {
             <Link
               key={product.id}
               href={`/productos/${product.slug}`}
-              className="group flex h-full min-h-[560px] flex-col overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] transition hover:-translate-y-1"
+              className="group flex h-full min-h-[500px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] transition hover:-translate-y-1 lg:min-h-[560px]"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image

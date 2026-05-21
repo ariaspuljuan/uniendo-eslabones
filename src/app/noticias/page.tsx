@@ -6,12 +6,12 @@ export default function NoticiasPage() {
   return (
     <main className="bg-[var(--color-bg)] text-[var(--color-text)]">
       <section className="page-hero-gradient border-b border-[color:var(--color-border)] py-24">
-        <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[1fr_.75fr] lg:items-end">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-[1fr_.75fr] lg:items-end">
           <div>
             <span className="text-sm font-black uppercase tracking-[0.22em] text-[var(--color-accent-strong)]">
               Centro de noticias
             </span>
-            <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
+            <h1 className="mt-4 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
               Noticias, anuncios y oportunidades del caucho natural.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">

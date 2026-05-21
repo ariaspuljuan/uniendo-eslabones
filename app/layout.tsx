@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { MobileTabBar } from "@/components/layout/MobileTabBar";
 
 export const metadata: Metadata = {
   title: "Uniendo Eslabones | Caucho natural colombiano",
@@ -31,10 +32,11 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="flex min-h-screen flex-col bg-[var(--color-bg)] text-[var(--color-text)]">
+      <body className="flex min-h-screen flex-col bg-[var(--color-bg)] pb-24 text-[var(--color-text)] md:pb-0">
         <Navbar />
         <div className="flex-1">{children}</div>
         <Footer />
+        <MobileTabBar />
       </body>
     </html>
   );

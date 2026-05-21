@@ -7,12 +7,12 @@ const categories = ["Todos", "Natural", "Industrial", "Asociaciones"];
 export default function ProductosPage() {
   return (
     <main className="bg-[var(--color-bg)] text-[var(--color-text)]">
-      <section className="page-hero-gradient border-b border-[color:var(--color-border)] py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="page-hero-gradient border-b border-[color:var(--color-border)] px-5 py-24 sm:py-20">
+        <div className="mx-auto max-w-7xl sm:px-6">
           <span className="text-sm font-black uppercase tracking-[0.22em] text-[var(--color-accent-strong)]">
             Catalogo sectorial
           </span>
-          <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight md:text-7xl">
+          <h1 className="mt-4 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
             Productos que mueven la cadena del caucho.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">
@@ -34,12 +34,12 @@ export default function ProductosPage() {
       </section>
 
       <section className="py-16">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
           {products.map((product) => (
             <Link
               key={product.id}
               href={`/productos/${product.slug}`}
-              className="group flex h-full min-h-[620px] flex-col overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] transition hover:-translate-y-1"
+              className="group flex h-full min-h-[520px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] transition hover:-translate-y-1 lg:min-h-[620px]"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image

@@ -56,7 +56,7 @@ export default async function ProductDetailPage({
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,rgba(255,255,255,.78)_48%,transparent_100%)] dark:bg-[linear-gradient(90deg,var(--color-bg)_0%,rgba(7,20,38,.78)_48%,transparent_100%)]" />
 
-        <div className="relative mx-auto flex min-h-[360px] max-w-7xl flex-col justify-end px-6 py-12">
+        <div className="relative mx-auto flex min-h-[420px] max-w-7xl flex-col justify-end px-5 py-10 sm:min-h-[360px] sm:px-6 sm:py-12">
           <Link
             href="/productos"
             className="mb-8 w-fit rounded-full border border-[color:var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm font-black text-[var(--color-accent)]"
@@ -69,7 +69,7 @@ export default async function ProductDetailPage({
               <span className="text-sm font-black uppercase tracking-[0.22em] text-[var(--color-accent-strong)]">
                 Detalle de producto
               </span>
-              <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+              <h1 className="mt-3 max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
                 {product.name}
               </h1>
               <p className="mt-4 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">
@@ -98,7 +98,7 @@ export default async function ProductDetailPage({
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-6 px-6 py-10 lg:grid-cols-[1.15fr_.85fr]">
+      <section className="mx-auto grid max-w-7xl gap-6 px-5 py-8 sm:px-6 sm:py-10 lg:grid-cols-[1.15fr_.85fr]">
         <div className="rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-card)]">
           <div className="relative aspect-square overflow-hidden rounded-2xl bg-[var(--color-surface-2)]">
             <Image
@@ -110,7 +110,7 @@ export default async function ProductDetailPage({
             />
           </div>
 
-          <div className="mt-4 grid grid-cols-3 gap-3">
+          <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
             {product.gallery.map((image, index) => (
               <div
                 key={image}
@@ -193,7 +193,7 @@ export default async function ProductDetailPage({
         </aside>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-6 px-6 pb-16 lg:grid-cols-[.85fr_1.15fr]">
+      <section className="mx-auto grid max-w-7xl gap-6 px-5 pb-16 sm:px-6 lg:grid-cols-[.85fr_1.15fr]">
         <article className="rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)]">
           <h2 className="text-2xl font-black">Aplicaciones principales</h2>
           <div className="mt-5 flex flex-wrap gap-3">

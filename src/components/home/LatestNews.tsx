@@ -4,14 +4,14 @@ import { latestNews } from "@/data/news";
 
 export function LatestNews() {
   return (
-    <section className="bg-[var(--color-bg-soft)] py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-[var(--color-bg-soft)] py-14 sm:py-20">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <span className="text-sm font-black uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
               Ultimas publicaciones
             </span>
-            <h2 className="mt-3 text-3xl font-black tracking-tight text-[var(--color-text)] md:text-5xl">
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-[var(--color-text)] sm:text-4xl md:text-5xl">
               Noticias y anuncios que mueven el sector
             </h2>
           </div>
@@ -78,7 +78,7 @@ export function LatestNews() {
                   href={item.externalUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="group flex min-h-[430px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]"
+                  className="group flex min-h-[390px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] sm:min-h-[430px]"
                 >
                   {content}
                 </a>
@@ -89,7 +89,7 @@ export function LatestNews() {
               <Link
                 key={item.id}
                 href={item.externalUrl}
-                className="group flex min-h-[430px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]"
+                className="group flex min-h-[390px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] sm:min-h-[430px]"
               >
                 {content}
               </Link>

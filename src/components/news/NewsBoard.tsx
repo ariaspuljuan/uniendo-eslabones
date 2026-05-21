@@ -35,8 +35,8 @@ export function NewsBoard({ items }: NewsBoardProps) {
   const rest = filteredItems.slice(1);
 
   return (
-    <section className="bg-[var(--color-bg)] py-16">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-[var(--color-bg)] py-12 sm:py-16">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="flex gap-3 overflow-x-auto pb-3">
           {filters.map((filter) => (
             <button
@@ -59,7 +59,7 @@ export function NewsBoard({ items }: NewsBoardProps) {
 
         {featured ? (
           <div className="mt-8 grid gap-6 lg:grid-cols-[1.15fr_.85fr]">
-            <article className="relative min-h-[460px] overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]">
+            <article className="relative min-h-[520px] overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] sm:min-h-[460px]">
               <Image
                 src={featured.banner}
                 alt={featured.title}
@@ -68,11 +68,11 @@ export function NewsBoard({ items }: NewsBoardProps) {
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,38,.82),rgba(7,20,38,.48),rgba(7,20,38,.12))]" />
-              <div className="relative flex min-h-[460px] max-w-2xl flex-col justify-end p-8 text-white">
+              <div className="relative flex min-h-[520px] max-w-2xl flex-col justify-end p-6 text-white sm:min-h-[460px] sm:p-8">
                 <span className="mb-4 w-fit rounded-full bg-[var(--color-warning)] px-4 py-2 text-xs font-black uppercase tracking-wide text-[#13233f]">
                   {featured.type === "anuncio" ? "Anuncio destacado" : "Noticia destacada"}
                 </span>
-                <h2 className="text-4xl font-black tracking-tight md:text-5xl">
+                <h2 className="text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
                   {featured.title}
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-white/90">
@@ -108,8 +108,8 @@ export function NewsBoard({ items }: NewsBoardProps) {
 
 function NewsCompactCard({ item }: { item: NewsItem }) {
   return (
-    <article className="grid min-h-[220px] grid-cols-[140px_1fr] overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]">
-      <div className="relative">
+    <article className="grid min-h-[220px] overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] sm:grid-cols-[140px_1fr]">
+      <div className="relative aspect-[16/10] sm:aspect-auto">
         <Image src={item.image} alt={item.title} fill className="object-cover" />
       </div>
       <div className="flex flex-col p-5">
@@ -128,7 +128,7 @@ function NewsCompactCard({ item }: { item: NewsItem }) {
 
 function NewsCard({ item }: { item: NewsItem }) {
   return (
-    <article className="flex min-h-[460px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]">
+    <article className="flex min-h-[410px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] sm:min-h-[460px]">
       <div className="relative aspect-[16/10]">
         <Image src={item.image} alt={item.title} fill className="object-cover" />
       </div>

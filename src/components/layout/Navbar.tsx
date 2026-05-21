@@ -34,7 +34,7 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex min-h-24 max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-6">
+      <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 md:min-h-24 md:py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/logo_full_uniendo_eslabones.webp"
@@ -42,11 +42,11 @@ export function Navbar() {
             width={300}
             height={120}
             priority
-            className="h-16 w-auto"
+            className="h-12 w-auto md:h-16"
           />
         </Link>
 
-        <nav className="order-3 flex w-full gap-5 overflow-x-auto text-nowrap md:order-none md:w-auto md:overflow-visible">
+        <nav className="hidden gap-5 overflow-x-auto text-nowrap md:flex md:w-auto md:overflow-visible">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -66,7 +66,7 @@ export function Navbar() {
           <ThemeToggle />
           <Link
             href="/productos"
-            className="rounded-md bg-[var(--color-accent)] px-4 py-3 text-sm font-black text-white shadow-lg shadow-emerald-950/20 transition hover:bg-[var(--color-accent-strong)]"
+            className="hidden rounded-md bg-[var(--color-accent)] px-4 py-3 text-sm font-black text-white shadow-lg shadow-emerald-950/20 transition hover:bg-[var(--color-accent-strong)] sm:inline-flex"
           >
             Explorar
           </Link>
