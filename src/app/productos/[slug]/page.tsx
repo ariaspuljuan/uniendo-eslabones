@@ -56,7 +56,7 @@ export default async function ProductDetailPage({
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,rgba(255,255,255,.78)_48%,transparent_100%)] dark:bg-[linear-gradient(90deg,var(--color-bg)_0%,rgba(7,20,38,.78)_48%,transparent_100%)]" />
 
-        <div className="relative mx-auto flex min-h-[420px] max-w-7xl flex-col justify-end px-5 py-10 sm:min-h-[360px] sm:px-6 sm:py-12">
+        <div className="relative mx-auto flex min-h-[420px] max-w-7xl flex-col justify-end px-5 pb-10 pt-28 sm:min-h-[360px] sm:px-6 sm:pb-12 sm:pt-32">
           <Link
             href="/productos"
             className="mb-8 w-fit rounded-full border border-[color:var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm font-black text-[var(--color-accent)]"
