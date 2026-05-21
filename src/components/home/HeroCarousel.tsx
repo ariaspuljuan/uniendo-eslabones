@@ -39,6 +39,8 @@ export function HeroCarousel() {
           width={1920}
           height={1080}
           priority={index === 0}
+          loading={index === 0 ? "eager" : "lazy"}
+          sizes="100vw"
           className={`absolute inset-0 -z-30 h-full w-full object-cover transition-opacity duration-1000 ${
             activeSlide === index ? "opacity-95" : "opacity-0"
           }`}

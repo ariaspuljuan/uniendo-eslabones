@@ -39,7 +39,7 @@ export function QuickAccess() {
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-          <div className="scroll-from-left">
+          <div>
             <span className="text-sm font-black uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
               Flujo de informacion
             </span>
@@ -47,20 +47,18 @@ export function QuickAccess() {
               Mas conexion entre actores.
             </h2>
           </div>
-          <p className="scroll-from-right text-base leading-7 text-[var(--color-muted)]">
+          <p className="text-base leading-7 text-[var(--color-muted)]">
             El home funciona como tablero inicial: dirige al usuario hacia
             productos, aliados y noticias sin perder energia visual ni claridad.
           </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-3">
-          {items.map((item, index) => (
+          {items.map((item) => (
             <Link
               key={item.title}
               href={item.href}
-              className={`scroll-reveal group rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1 ${
-                index === 1 ? "scroll-stagger-1" : index === 2 ? "scroll-stagger-2" : ""
-              }`}
+              className="group rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)] transition duration-200 hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex items-start justify-between gap-4">
                 <span

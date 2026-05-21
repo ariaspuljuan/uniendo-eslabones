@@ -31,6 +31,12 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <link rel="preload" as="image" href="/images/hero-slide-1.png" />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/logo_full_uniendo_eslabones.webp"
+        />
       </head>
       <body className="flex min-h-screen flex-col bg-[var(--color-bg)] pb-24 text-[var(--color-text)] md:pb-0">
         <Navbar />
