@@ -1,0 +1,8 @@
+<svg width="720" height="900" viewBox="0 0 720 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="900" rx="48" fill="#E8F0FF"/>
+  <rect x="92" y="120" width="536" height="420" rx="42" fill="#FFFFFF"/>
+  <path d="M156 384C262 268 422 250 558 354" stroke="#3365BB" stroke-width="46" stroke-linecap="round"/>
+  <path d="M154 474C286 404 428 410 560 478" stroke="#5DC511" stroke-width="34" stroke-linecap="round"/>
+  <circle cx="548" cy="184" r="58" fill="#FFB500"/>
+  <text x="360" y="710" text-anchor="middle" fill="#13233F" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="900">Proyecto aliado</text>
+</svg>

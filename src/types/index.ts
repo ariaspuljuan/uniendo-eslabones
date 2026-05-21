@@ -41,12 +41,22 @@ export type Product = {
 
 export type Organization = {
   id: string;
+  slug: string;
   name: string;
+  shortName: string;
   description: string;
-  type: string;
-  category: ProductCategory;
+  longDescription: string;
+  type: "investigacion" | "financiero" | "gremial" | "sostenibilidad" | "educacion" | "productivo";
+  category: "institucion" | "academia" | "empresa" | "gremio" | "sello";
   city: string;
   logo: string;
+  banner: string;
+  joinedAt: string;
+  website?: string;
+  phone?: string;
+  email?: string;
+  gallery: string[];
+  focusAreas: string[];
 };
 
 export type NewsItem = {
