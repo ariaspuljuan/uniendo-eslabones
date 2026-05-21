@@ -7,15 +7,26 @@ const categories = ["Todos", "Natural", "Industrial", "Asociaciones"];
 export default function ProductosPage() {
   return (
     <main className="bg-[var(--color-bg)] text-[var(--color-text)]">
-      <section className="page-hero-gradient border-b border-[color:var(--color-border)] px-5 py-24 sm:py-20">
+      <section className="relative isolate overflow-hidden border-b border-[color:var(--color-border)] px-5 pb-14 pt-28 sm:pb-20 sm:pt-32">
+        <Image
+          src="/images/products/banner-catalogo.svg"
+          alt="Banner del catalogo sectorial de productos de caucho"
+          width={1920}
+          height={720}
+          priority
+          className="absolute inset-0 -z-30 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(7,20,38,.82)_0%,rgba(7,20,38,.58)_48%,rgba(7,20,38,.22)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-[var(--color-bg)] to-transparent" />
+
         <div className="mx-auto max-w-7xl sm:px-6">
-          <span className="text-sm font-black uppercase tracking-[0.22em] text-[var(--color-accent-strong)]">
+          <span className="text-sm font-black uppercase tracking-[0.22em] text-[var(--color-warning)] drop-shadow-[0_3px_12px_rgba(0,0,0,.55)]">
             Catalogo sectorial
           </span>
-          <h1 className="mt-4 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
+          <h1 className="mt-4 max-w-4xl text-4xl font-black tracking-tight text-white drop-shadow-[0_10px_28px_rgba(0,0,0,.72)] sm:text-5xl md:text-7xl">
             Productos que mueven la cadena del caucho.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">
+          <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-white drop-shadow-[0_6px_18px_rgba(0,0,0,.72)]">
             Una vitrina visual para presentar referencias, proveedores,
             ubicacion y capacidades productivas del sector.
           </p>
@@ -24,7 +35,7 @@ export default function ProductosPage() {
             {categories.map((category) => (
               <span
                 key={category}
-                className="rounded-full border border-[color:var(--color-border)] bg-[var(--color-surface)] px-5 py-2 text-sm font-bold text-[var(--color-text)]"
+                className="shrink-0 rounded-full border border-white/25 bg-white/90 px-5 py-2 text-sm font-black text-[#13233f] shadow-lg backdrop-blur"
               >
                 {category}
               </span>

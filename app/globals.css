@@ -104,3 +104,80 @@ a {
 :root[data-theme="dark"] .moon-icon {
   display: block;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .scroll-reveal,
+    .scroll-from-left,
+    .scroll-from-right {
+      animation-duration: 1ms;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 34%;
+      will-change: opacity, transform, filter;
+    }
+
+    .scroll-reveal {
+      animation-name: reveal-up;
+    }
+
+    .scroll-from-left {
+      animation-name: reveal-left;
+    }
+
+    .scroll-from-right {
+      animation-name: reveal-right;
+    }
+
+    .scroll-stagger-1 {
+      animation-range: entry 6% cover 38%;
+    }
+
+    .scroll-stagger-2 {
+      animation-range: entry 12% cover 42%;
+    }
+
+    .scroll-stagger-3 {
+      animation-range: entry 18% cover 46%;
+    }
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(44px) scale(0.98);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-56px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(56px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}

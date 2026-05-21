@@ -98,15 +98,15 @@ export default async function ProductDetailPage({
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-6 px-5 py-8 sm:px-6 sm:py-10 lg:grid-cols-[1.15fr_.85fr]">
-        <div className="rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-card)]">
+      <section className="mx-auto grid max-w-7xl gap-6 px-5 py-6 sm:px-6 sm:py-10 lg:grid-cols-[1.15fr_.85fr]">
+        <div className="rounded-3xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[var(--shadow-card)] sm:p-5">
           <div className="relative aspect-square overflow-hidden rounded-2xl bg-[var(--color-surface-2)]">
             <Image
               src={product.gallery[0] ?? product.image}
               alt={product.name}
               width={900}
               height={900}
-              className="h-full w-full object-contain p-6"
+              className="h-full w-full object-contain p-3 sm:p-6"
             />
           </div>
 
@@ -128,7 +128,7 @@ export default async function ProductDetailPage({
           </div>
         </div>
 
-        <aside className="space-y-6">
+        <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
           <section className="rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)]">
             <span className="rounded-full bg-[var(--color-warning)] px-3 py-1 text-xs font-black uppercase text-[#13233f]">
               {product.isNaturalRubber ? "Caucho natural" : "Derivado"}
@@ -175,16 +175,16 @@ export default async function ProductDetailPage({
               </p>
             </div>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div className="mt-6 grid gap-3">
               <a
                 href={`https://wa.me/${supplier.contact.whatsapp.replace(/\D/g, "")}`}
-                className="rounded-md bg-[var(--color-highlight)] px-5 py-3 text-center text-sm font-black uppercase text-white"
+                className="rounded-2xl bg-[var(--color-highlight)] px-5 py-4 text-center text-sm font-black uppercase text-white shadow-lg sm:rounded-md sm:py-3"
               >
                 WhatsApp
               </a>
               <a
                 href={`mailto:${supplier.contact.email}`}
-                className="rounded-md bg-[var(--color-accent)] px-5 py-3 text-center text-sm font-black uppercase text-white"
+                className="rounded-2xl bg-[var(--color-accent)] px-5 py-4 text-center text-sm font-black uppercase text-white shadow-lg sm:rounded-md sm:py-3"
               >
                 Enviar correo
               </a>

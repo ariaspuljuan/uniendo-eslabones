@@ -27,9 +27,7 @@ const items = [
     href: "/noticias",
     label: "Noticias",
     color: "bg-[var(--color-warning)]",
-    icon: (
-      <path d="M5 5h14v14H5V5Zm3 4h8M8 12h8M8 15h5" />
-    ),
+    icon: <path d="M5 5h14v14H5V5Zm3 4h8M8 12h8M8 15h5" />,
   },
 ];
 
@@ -37,30 +35,32 @@ export function QuickAccess() {
   return (
     <section className="relative overflow-hidden bg-[var(--color-bg)] py-20">
       <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-[var(--color-warning)]/20 blur-3xl" />
-      <div className="pointer-events-none absolute right-0 bottom-10 h-72 w-72 rounded-full bg-[var(--color-highlight)]/20 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-10 right-0 h-72 w-72 rounded-full bg-[var(--color-highlight)]/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-          <div>
+          <div className="scroll-from-left">
             <span className="text-sm font-black uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
-              Flujo de información
+              Flujo de informacion
             </span>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-[var(--color-text)] md:text-5xl">
-              Más conexión entre actores.
+              Mas conexion entre actores.
             </h2>
           </div>
-          <p className="text-base leading-7 text-[var(--color-muted)]">
+          <p className="scroll-from-right text-base leading-7 text-[var(--color-muted)]">
             El home funciona como tablero inicial: dirige al usuario hacia
-            productos, aliados y noticias sin perder energía visual ni claridad.
+            productos, aliados y noticias sin perder energia visual ni claridad.
           </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-3">
-          {items.map((item) => (
+          {items.map((item, index) => (
             <Link
               key={item.title}
               href={item.href}
-              className="group rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1"
+              className={`scroll-reveal group rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1 ${
+                index === 1 ? "scroll-stagger-1" : index === 2 ? "scroll-stagger-2" : ""
+              }`}
             >
               <div className="flex items-start justify-between gap-4">
                 <span
@@ -91,7 +91,7 @@ export function QuickAccess() {
                 {item.text}
               </p>
               <span className="mt-6 inline-flex font-black text-[var(--color-accent)]">
-                Abrir sección -&gt;
+                Abrir seccion -&gt;
               </span>
             </Link>
           ))}

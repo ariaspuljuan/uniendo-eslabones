@@ -6,7 +6,7 @@ export function LatestNews() {
   return (
     <section className="bg-[var(--color-bg-soft)] py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
-        <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+        <div className="scroll-from-left mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <span className="text-sm font-black uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
               Ultimas publicaciones
@@ -33,8 +33,17 @@ export function LatestNews() {
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {latestNews.map((item) => {
+          {latestNews.map((item, index) => {
             const isExternal = item.externalUrl.startsWith("http");
+            const stagger =
+              index === 1
+                ? "scroll-stagger-1"
+                : index === 2
+                  ? "scroll-stagger-2"
+                  : index === 3
+                    ? "scroll-stagger-3"
+                    : "";
+            const cardClass = `scroll-reveal group flex min-h-[390px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] sm:min-h-[430px] ${stagger}`;
             const content = (
               <>
                 <div className="relative aspect-[16/11] overflow-hidden">
@@ -78,7 +87,7 @@ export function LatestNews() {
                   href={item.externalUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="group flex min-h-[390px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] sm:min-h-[430px]"
+                  className={cardClass}
                 >
                   {content}
                 </a>
@@ -86,11 +95,7 @@ export function LatestNews() {
             }
 
             return (
-              <Link
-                key={item.id}
-                href={item.externalUrl}
-                className="group flex min-h-[390px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] sm:min-h-[430px]"
-              >
+              <Link key={item.id} href={item.externalUrl} className={cardClass}>
                 {content}
               </Link>
             );

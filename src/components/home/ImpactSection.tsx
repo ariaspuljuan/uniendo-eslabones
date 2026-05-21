@@ -28,24 +28,26 @@ export function ImpactSection() {
     <section className="bg-[var(--color-bg-soft)] py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
+          <div className="scroll-from-left">
             <span className="text-sm font-black uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
               Cadena viva
             </span>
             <h2 className="mt-4 text-4xl font-black tracking-tight text-[var(--color-text)] md:text-6xl">
-              Una lectura rápida del ecosistema
+              Una lectura rapida del ecosistema
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-[var(--color-muted)]">
               El usuario entiende en segundos donde esta el valor: origen,
-              transformación, aliados, noticias y mercado.
+              transformacion, aliados, noticias y mercado.
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="scroll-from-right grid gap-4 sm:grid-cols-2">
             {stages.map((stage, index) => (
               <article
                 key={stage.title}
-                className="relative overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)]"
+                className={`scroll-reveal relative overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)] ${
+                  index % 2 === 1 ? "scroll-stagger-1" : ""
+                }`}
               >
                 <span className="absolute -right-5 -top-6 text-8xl font-black text-[var(--color-accent-soft)]">
                   {index + 1}
@@ -67,10 +69,12 @@ export function ImpactSection() {
         </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {highlights.map(([title, text]) => (
+          {highlights.map(([title, text], index) => (
             <article
               key={title}
-              className="rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)]"
+              className={`scroll-reveal rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)] ${
+                index === 1 ? "scroll-stagger-1" : index === 2 ? "scroll-stagger-2" : ""
+              }`}
             >
               <h3 className="text-xl font-black text-[var(--color-text)]">
                 {title}

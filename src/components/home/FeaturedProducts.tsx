@@ -6,7 +6,7 @@ export function FeaturedProducts() {
   return (
     <section className="bg-[var(--color-bg)] py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
-        <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+        <div className="scroll-from-left mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <span className="text-sm font-black uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
               Catalogo
@@ -24,11 +24,19 @@ export function FeaturedProducts() {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <Link
               key={product.id}
               href={`/productos/${product.slug}`}
-              className="group flex h-full min-h-[500px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] transition hover:-translate-y-1 lg:min-h-[560px]"
+              className={`scroll-reveal group flex h-full min-h-[500px] flex-col overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] transition hover:-translate-y-1 lg:min-h-[560px] ${
+                index === 1
+                  ? "scroll-stagger-1"
+                  : index === 2
+                    ? "scroll-stagger-2"
+                    : index === 3
+                      ? "scroll-stagger-3"
+                      : ""
+              }`}
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
