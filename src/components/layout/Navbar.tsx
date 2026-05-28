@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 
@@ -11,10 +12,14 @@ const navItems = [
   { label: "Aliados", href: "/gremios" },
   { label: "Noticias", href: "/noticias" },
   { label: "Indicadores", href: "/dashboard" },
+  { label: "Admin", href: "/admin" },
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const usesLightHero = pathname === "/admin" || pathname === "/dashboard";
+  const isTransparent = !usesLightHero && !isScrolled;
 
   useEffect(() => {
     function handleScroll() {
@@ -30,9 +35,9 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "border-b border-[color:var(--color-border)] bg-[color-mix(in_srgb,var(--color-bg)_92%,transparent)] shadow-lg shadow-blue-950/10 backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
+        isTransparent
+          ? "border-b border-transparent bg-transparent"
+          : "border-b border-[color:var(--color-border)] bg-[color-mix(in_srgb,var(--color-bg)_92%,transparent)] shadow-lg shadow-blue-950/10 backdrop-blur-xl"
       }`}
     >
       <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 md:min-h-24 md:py-4">
@@ -53,9 +58,9 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={`text-sm font-bold transition ${
-                isScrolled
-                  ? "text-[var(--color-muted)] hover:text-[var(--color-text)]"
-                  : "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] hover:text-[var(--color-warning)]"
+                isTransparent
+                  ? "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] hover:text-[var(--color-warning)]"
+                  : "text-[var(--color-muted)] hover:text-[var(--color-text)]"
               }`}
             >
               {item.label}

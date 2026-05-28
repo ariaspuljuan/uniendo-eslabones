@@ -38,6 +38,9 @@ export function Footer() {
             <Link href="/dashboard" className="hover:text-[var(--color-accent-strong)]">
               Indicadores
             </Link>
+            <Link href="/admin" className="hover:text-[var(--color-accent-strong)]">
+              Admin
+            </Link>
           </nav>
         </div>
 
