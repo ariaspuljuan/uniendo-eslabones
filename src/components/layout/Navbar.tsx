@@ -10,6 +10,7 @@ const navItems = [
   { label: "Productos", href: "/productos" },
   { label: "Aliados", href: "/gremios" },
   { label: "Noticias", href: "/noticias" },
+  { label: "Indicadores", href: "/dashboard" },
 ];
 
 export function Navbar() {

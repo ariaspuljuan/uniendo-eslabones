@@ -28,6 +28,11 @@ const tabs = [
     href: "/noticias",
     icon: <path d="M5 5h14v14H5V5Zm3 4h8M8 12h8M8 15h5" />,
   },
+  {
+    label: "Datos",
+    href: "/dashboard",
+    icon: <path d="M4 19V5m0 14h16M8 16l3-4 3 2 4-7" />,
+  },
 ];
 
 export function MobileTabBar() {
@@ -35,7 +40,7 @@ export function MobileTabBar() {
 
   return (
     <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-[color:var(--color-border)] bg-[color-mix(in_srgb,var(--color-bg)_94%,transparent)] px-3 pb-[calc(env(safe-area-inset-bottom)+10px)] pt-2 shadow-[0_-18px_40px_rgba(19,35,63,0.12)] backdrop-blur-xl md:hidden">
-      <div className="mx-auto grid max-w-md grid-cols-4 gap-2">
+      <div className="mx-auto grid max-w-md grid-cols-5 gap-1.5">
         {tabs.map((tab) => {
           const isActive =
             tab.href === "/" ? pathname === "/" : pathname.startsWith(tab.href);
