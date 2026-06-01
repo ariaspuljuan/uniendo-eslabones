@@ -22,8 +22,8 @@ const goya: Supplier = {
   id: "industrias-goya",
   name: "Industrias Goya S.A.S",
   city: "Funza, Cundinamarca, Colombia",
-  logo: "/images/suppliers/goya-logo.svg",
-  banner: "/images/suppliers/goya-banner.svg",
+  logo: "/images/suppliers/logo-productos-goya.png",
+  banner: "/images/suppliers/banner-goya-productos.png",
   description:
     "Proveedor especializado en productos profesionales para trabajo continuo, proteccion de manos y aplicaciones industriales. Su portafolio conecta necesidades de construccion, pintura, preparacion de superficies y procesos operativos.",
   contact: {
@@ -39,8 +39,8 @@ const cauchosEcheverri: Supplier = {
   id: "cauchos-echeverri",
   name: "Cauchos Echeverri",
   city: "Medellin, Colombia",
-  logo: "/images/suppliers/cauchos-echeverri-logo.svg",
-  banner: "/images/suppliers/cauchos-echeverri-banner.svg",
+  logo: "/images/suppliers/logo-echeverri-productos.png",
+  banner: "/images/suppliers/banner-echeverri-productos.png",
   description:
     "Empresa con enfoque en soluciones derivadas del caucho para mercados industriales, deportivos y de uso cotidiano. Su propuesta combina transformacion, desarrollo de producto y conocimiento tecnico del material.",
   contact: {
