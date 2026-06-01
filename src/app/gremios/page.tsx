@@ -37,7 +37,7 @@ export default function GremiosPage() {
     <main className="bg-[var(--color-bg)] text-[var(--color-text)]">
       <section className="relative isolate overflow-hidden border-b border-[color:var(--color-border)] px-5 pb-14 pt-28 sm:pb-20 sm:pt-32">
         <Image
-          src="/images/allies/banner-aliados.svg"
+          src="/images/allies/banner_aliados_page.png"
           alt="Banner de aliados de Uniendo Eslabones"
           width={1920}
           height={720}

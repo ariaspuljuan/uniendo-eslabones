@@ -4,8 +4,8 @@ const disguantes: Supplier = {
   id: "disguantes",
   name: "Disguantes de Colombia S.A.S",
   city: "Bogota, Colombia",
-  logo: "/images/suppliers/disguantes-logo.svg",
-  banner: "/images/suppliers/disguantes-banner.svg",
+  logo: "/images/suppliers/disguantes-logo.png",
+  banner: "/images/suppliers/banner-disguantes.png",
   description:
     "Empresa proveedora de soluciones de proteccion para actividades industriales, manufactura y manipulacion de materiales. Su oferta esta orientada a compradores que buscan continuidad de suministro, calidad verificable y atencion comercial directa.",
   contact: {

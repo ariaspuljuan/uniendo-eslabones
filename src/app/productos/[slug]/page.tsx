@@ -52,32 +52,33 @@ export default async function ProductDetailPage({
           width={1600}
           height={420}
           priority
-          className="absolute inset-0 h-full w-full object-cover opacity-30"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,rgba(255,255,255,.78)_48%,transparent_100%)] dark:bg-[linear-gradient(90deg,var(--color-bg)_0%,rgba(7,20,38,.78)_48%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,38,.88)_0%,rgba(7,20,38,.68)_50%,rgba(7,20,38,.34)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[var(--color-bg-soft)] to-transparent" />
 
         <div className="relative mx-auto flex min-h-[420px] max-w-7xl flex-col justify-end px-5 pb-10 pt-28 sm:min-h-[360px] sm:px-6 sm:pb-12 sm:pt-32">
           <Link
             href="/productos"
-            className="mb-8 w-fit rounded-full border border-[color:var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm font-black text-[var(--color-accent)]"
+            className="mb-8 w-fit rounded-full border border-white/20 bg-white/95 px-4 py-2 text-sm font-black text-[var(--color-accent)] shadow-lg"
           >
             &lt;- Volver al catalogo
           </Link>
 
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <span className="text-sm font-black uppercase tracking-[0.22em] text-[var(--color-accent-strong)]">
+              <span className="text-sm font-black uppercase tracking-[0.22em] text-[var(--color-warning)] drop-shadow-[0_3px_12px_rgba(0,0,0,.6)]">
                 Detalle de producto
               </span>
-              <h1 className="mt-3 max-w-4xl text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
+              <h1 className="mt-3 max-w-4xl text-3xl font-black tracking-tight text-white drop-shadow-[0_8px_28px_rgba(0,0,0,.72)] sm:text-4xl md:text-6xl">
                 {product.name}
               </h1>
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">
+              <p className="mt-4 max-w-2xl text-lg font-medium leading-8 text-white/90 drop-shadow-[0_6px_18px_rgba(0,0,0,.62)]">
                 {product.shortDescription}
               </p>
             </div>
 
-            <div className="flex w-fit items-center gap-4 rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-4 shadow-[var(--shadow-card)]">
+            <div className="flex w-fit items-center gap-4 rounded-2xl border border-white/20 bg-white/95 p-4 text-[#13233f] shadow-[0_24px_80px_rgba(0,0,0,.28)]">
               <Image
                 src={supplier.logo}
                 alt={`Logo de ${supplier.name}`}
