@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export const heroSlides = [
   {
-    src: "/images/hero-slide-1.png",
+    src: "/images/hero-slide-1c.png",
     alt: "Cultivo de caucho natural en Colombia",
   },
   {
