@@ -9,7 +9,7 @@ export function FeaturedProducts() {
         <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <span className="text-sm font-black uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
-              Catalogo
+              Catálogo
             </span>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-[var(--color-text)] sm:text-4xl md:text-5xl">
               Productos en vitrina

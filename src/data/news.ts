@@ -5,9 +5,9 @@ export const newsItems: NewsItem[] = [
     id: "1",
     type: "anuncio",
     category: "productos",
-    title: "Guantes industriales de latex natural",
+    title: "Guantes industriales de látex natural",
     summary:
-      "Guantes industriales fabricados para brindar proteccion en jornadas de trabajo exigentes. Son una alternativa para empresas que requieren elementos de seguridad flexibles, resistentes y comodos para manipulacion de materiales, procesos operativos y actividades de manufactura.",
+      "Guantes industriales fabricados para brindar protección en jornadas de trabajo exigentes. Son una alternativa para empresas que requieren elementos de seguridad flexibles, resistentes y cómodos para manipulación de materiales, procesos operativos y actividades de manufactura.",
     source: "Uniendo Eslabones",
     date: "2026-05-11",
     image: "/images_products/guantes-disguantes.png",
@@ -23,7 +23,7 @@ export const newsItems: NewsItem[] = [
     category: "sector",
     title: "Cenicaucho en Mesas Sectoriales Sena",
     summary:
-      "Las Mesas Sectoriales son el espacio natural de concertación con el sector productivo, gubernamental y académico para desarrollar la gestión del talento humano por competencias generando conocimiento transferible a la formación profesional.",
+      "Las Mesas Sectoriales son el espacio natural de concertación con el sector productivo, gubernamental y académico para desarrollar la gestión del talento humano por competencias, generando conocimiento transferible a la formación profesional.",
     source: "Confecaucho",
     date: "2024-03-11",
     image: "/images/news/img-noticia-sena.png",
@@ -44,7 +44,7 @@ export const newsItems: NewsItem[] = [
     image: "/images/news/img-noticia-havea.png",
     banner: "/images/news/img-noticia-havea.png",
     externalUrl: "https://confecaucho.com/2026/04/28/hevea-manager-transforma-datos-en-decisiones-rentables/",
-    ctaLabel: "leer en Confecaucho",
+    ctaLabel: "Leer en Confecaucho",
   },
   {
     id: "4",
@@ -52,7 +52,7 @@ export const newsItems: NewsItem[] = [
     category: "sector",
     title: "El látex de la esperanza y el nudo de la burocracia",
     summary:
-      "Desde 2019, nuestro gremio ejecuta un Plan Estratégico diseñado para la excelencia. Hemos demostrado que la unidad no es un concepto abstracto, sino una cifra de crecimiento: incremento en exportaciones, alianzas internacionales y un reconocimiento continental a la calidad de nuestra cadena productiva.",
+      "Desde 2019, nuestro gremio ejecuta un Plan Estratégico diseñado para la excelencia. Hemos demostrado que la unidad no es un concepto abstracto, sino una cifra de crecimiento: incremento en exportaciones, alianzas internacionales y reconocimiento continental a la calidad de nuestra cadena productiva.",
     source: "Confecaucho",
     date: "2026-04-28",
     image: "/images/news/img-noticia-latex.png",
@@ -64,9 +64,9 @@ export const newsItems: NewsItem[] = [
     id: "5",
     type: "anuncio",
     category: "sector",
-    title: "Revista Digital Uniendo Eslabones edición No.10",
+    title: "Revista Digital Uniendo Eslabones edición No. 10",
     summary:
-      "La Confederación Cauchera Colombiana (CCC) lanzó oficialmente su herramienta digital. Diseñada por expertos, Hevea Manager promete revolucionar la gestión en las plantaciones de caucho natural, permitiendo un seguimiento agronómico de precisión y sistematizando la información productiva para optimizar la rentabilidad.",
+      "La Confederación Cauchera Colombiana (CCC) lanzó oficialmente una nueva edición de su revista digital. Este contenido fortalece la difusión sectorial, la visibilidad de actores y la circulación de información estratégica para la cadena del caucho natural.",
     source: "Uniendo Eslabones",
     date: "2026-05-20",
     image: "/images/news/img-noticia-edicion10.png",

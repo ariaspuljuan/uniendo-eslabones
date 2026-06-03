@@ -27,7 +27,7 @@ const usd = new Intl.NumberFormat("en-US", {
 export function DashboardClient() {
   const [summary, setSummary] = useState<IndicatorSummary | null>(null);
   const [history, setHistory] = useState<IndicatorHistoryPoint[]>([]);
-  const [filter, setFilter] = useState("7 dias");
+  const [filter, setFilter] = useState("7 días");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -116,7 +116,7 @@ export function DashboardClient() {
             history={history}
             series={[
               { key: "tsr20", label: "TSR20", color: "#3365bb" },
-              { key: "latex", label: "Latex", color: "#5dc511" },
+              { key: "latex", label: "Látex", color: "#5dc511" },
               { key: "smr20", label: "SMR20", color: "#ffb500" },
               { key: "str20", label: "STR20", color: "#0f766e" },
             ]}

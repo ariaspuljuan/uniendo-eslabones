@@ -7,7 +7,7 @@ import { MobileTabBar } from "@/components/layout/MobileTabBar";
 export const metadata: Metadata = {
   title: "Uniendo Eslabones | Caucho natural colombiano",
   description:
-    "Plataforma sectorial para conectar productos, aliados, noticias e informacion del caucho natural colombiano.",
+    "Plataforma sectorial para conectar productos, aliados, noticias e información del caucho natural colombiano.",
 };
 
 export default function RootLayout({

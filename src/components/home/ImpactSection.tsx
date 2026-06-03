@@ -1,26 +1,26 @@
 const stages = [
   {
     title: "Cultivo",
-    text: "Origen productivo, territorios y calidad del latex.",
+    text: "Origen productivo, territorios y calidad del látex.",
   },
   {
     title: "Beneficio",
-    text: "Procesos, buenas practicas y trazabilidad.",
+    text: "Procesos, buenas prácticas y trazabilidad.",
   },
   {
-    title: "Transformacion",
+    title: "Transformación",
     text: "Industria, prototipos y productos terminados.",
   },
   {
     title: "Mercado",
-    text: "Compradores, oportunidades y circulacion comercial.",
+    text: "Compradores, oportunidades y circulación comercial.",
   },
 ];
 
 const highlights = [
   ["Productores", "Visibilidad territorial y oferta organizada."],
-  ["Compradores", "Busqueda rapida por producto, region y proveedor."],
-  ["Gremios", "Informacion sectorial lista para actualizarse."],
+  ["Compradores", "Búsqueda rápida por producto, región y proveedor."],
+  ["Gremios", "Información sectorial lista para actualizarse."],
 ];
 
 export function ImpactSection() {
@@ -33,11 +33,11 @@ export function ImpactSection() {
               Cadena viva
             </span>
             <h2 className="mt-4 text-4xl font-black tracking-tight text-[var(--color-text)] md:text-6xl">
-              Una lectura rapida del ecosistema
+              Una lectura rápida del ecosistema
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-[var(--color-muted)]">
-              El usuario entiende en segundos donde esta el valor: origen,
-              transformacion, aliados, noticias y mercado.
+              El usuario entiende en segundos dónde está el valor: origen,
+              transformación, aliados, noticias y mercado.
             </p>
           </div>
 

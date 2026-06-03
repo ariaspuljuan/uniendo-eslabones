@@ -1,16 +1,24 @@
+import Image from "next/image";
 import Link from "next/link";
-import { HeroCarousel } from "@/components/home/HeroCarousel";
 
 const metrics = [
-  ["4", "lineas de producto"],
-  ["3", "rutas de informacion"],
+  ["5", "líneas de producto"],
+  ["3", "rutas de información"],
   ["24/7", "vitrina sectorial"],
 ];
 
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-[var(--color-bg)]">
-      <HeroCarousel />
+      <Image
+        src="/images/fondo-hero-new-ue.png"
+        alt="Cadena del caucho natural colombiano"
+        width={1920}
+        height={1080}
+        priority
+        sizes="100vw"
+        className="absolute inset-0 -z-30 h-full w-full object-cover"
+      />
       <div className="hero-overlay absolute inset-0 -z-20" />
       <div className="hero-bottom-fade absolute inset-x-0 bottom-0 -z-20 h-44" />
 
@@ -37,7 +45,7 @@ export function Hero() {
 
           <p className="mt-5 max-w-2xl text-base font-medium leading-7 text-white drop-shadow-[0_5px_16px_rgba(0,0,0,0.62)] sm:text-xl sm:leading-8">
             Una plataforma viva para conectar productos, gremios, noticias,
-            regiones y oportunidades en un solo flujo de informacion sectorial.
+            regiones y oportunidades en un solo flujo de información sectorial.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">

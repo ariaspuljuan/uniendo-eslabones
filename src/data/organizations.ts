@@ -143,7 +143,7 @@ export const organizations: Organization[] = [
     shortName: "Fedepalma",
     description: "Federacion Nacional de Cultivadores de Palma de Aceite.",
     longDescription:
-      "Aliado gremial con experiencia en sostenibilidad, extension sectorial, informacion tecnica y fortalecimiento de cadenas agroindustriales.",
+      "Aliado gremial con experiencia en sostenibilidad, extensión sectorial, información técnica y fortalecimiento de cadenas agroindustriales.",
     type: "gremial",
     category: "gremio",
     city: "Colombia",

@@ -62,7 +62,7 @@ export default async function ProductDetailPage({
             href="/productos"
             className="mb-8 w-fit rounded-full border border-white/20 bg-white/95 px-4 py-2 text-sm font-black text-[var(--color-accent)] shadow-lg"
           >
-            &lt;- Volver al catalogo
+            &lt;- Volver al catálogo
           </Link>
 
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -169,7 +169,7 @@ export default async function ProductDetailPage({
                 <strong>Cargo:</strong> {supplier.contact.role}
               </p>
               <p>
-                <strong>Telefono:</strong> {supplier.contact.phone}
+                <strong>Teléfono:</strong> {supplier.contact.phone}
               </p>
               <p>
                 <strong>Correo:</strong> {supplier.contact.email}
@@ -177,6 +177,16 @@ export default async function ProductDetailPage({
             </div>
 
             <div className="mt-6 grid gap-3">
+              {supplier.contact.website ? (
+                <a
+                  href={supplier.contact.website}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl bg-[var(--color-warning)] px-5 py-4 text-center text-sm font-black uppercase text-[#13233f] shadow-lg sm:rounded-md sm:py-3"
+                >
+                  Comprar con el proveedor
+                </a>
+              ) : null}
               <a
                 href={`https://wa.me/${supplier.contact.whatsapp.replace(/\D/g, "")}`}
                 className="rounded-2xl bg-[var(--color-highlight)] px-5 py-4 text-center text-sm font-black uppercase text-white shadow-lg sm:rounded-md sm:py-3"
@@ -217,7 +227,7 @@ export default async function ProductDetailPage({
           <div className="mt-5 grid gap-3 sm:grid-cols-2">
             <div className="rounded-xl bg-[var(--color-surface-2)] p-4">
               <p className="text-xs font-black uppercase tracking-wide text-[var(--color-accent)]">
-                Ubicacion
+                Ubicación
               </p>
               <p className="mt-1 font-bold">{supplier.city}</p>
             </div>

@@ -17,7 +17,7 @@ export function Footer() {
           </Link>
           <p className="mt-4 max-w-md text-sm leading-6 text-[var(--color-muted)]">
             Una vitrina digital para conectar la cadena productiva del caucho
-            natural colombiano: productos, gremios, informacion y oportunidades.
+            natural colombiano: productos, gremios, información y oportunidades.
           </p>
         </div>
 
@@ -51,7 +51,21 @@ export function Footer() {
           <p className="mt-4 text-sm leading-6 text-[var(--color-muted)]">
             Colombia
             <br />
-            info@uniendoeslabones.co
+            Correo:{" "}
+            <a
+              href="mailto:karen.arango@confecaucho.com"
+              className="font-bold hover:text-[var(--color-accent-strong)]"
+            >
+              karen.arango@confecaucho.com
+            </a>
+            <br />
+            Teléfono:{" "}
+            <a
+              href="tel:+573172536737"
+              className="font-bold hover:text-[var(--color-accent-strong)]"
+            >
+              3172536737
+            </a>
           </p>
         </div>
       </div>

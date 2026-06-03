@@ -10,7 +10,7 @@ export default function ProductosPage() {
       <section className="relative isolate overflow-hidden border-b border-[color:var(--color-border)] px-5 pb-14 pt-28 sm:pb-20 sm:pt-32">
         <Image
           src="/images/products/banner_productos_page.png"
-          alt="Banner del catalogo sectorial de productos de caucho"
+          alt="Banner del catálogo sectorial de productos de caucho"
           width={1920}
           height={720}
           priority
@@ -21,14 +21,14 @@ export default function ProductosPage() {
 
         <div className="mx-auto max-w-7xl sm:px-6">
           <span className="text-sm font-black uppercase tracking-[0.22em] text-[var(--color-warning)] drop-shadow-[0_3px_12px_rgba(0,0,0,.55)]">
-            Catalogo sectorial
+            Catálogo sectorial
           </span>
           <h1 className="mt-4 max-w-4xl text-4xl font-black tracking-tight text-white drop-shadow-[0_10px_28px_rgba(0,0,0,.72)] sm:text-5xl md:text-7xl">
             Productos que mueven la cadena del caucho.
           </h1>
           <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-white drop-shadow-[0_6px_18px_rgba(0,0,0,.72)]">
             Una vitrina visual para presentar referencias, proveedores,
-            ubicacion y capacidades productivas del sector.
+            ubicación y capacidades productivas del sector.
           </p>
 
           <div className="mt-9 flex gap-3 overflow-x-auto pb-2">
