@@ -61,13 +61,11 @@ const agrosavia: Supplier = {
   description:
     "Corporación Colombiana de Investigación Agropecuaria. Su oferta tecnológica aporta soluciones biológicas y conocimiento aplicado para fortalecer la productividad y sostenibilidad de cultivos estratégicos como el caucho natural.",
   contact: {
-    sellerName: "Equipo de recaudo y atención comercial",
-    role: "Proveedor tecnológico",
-    phone: "+57 311 836 7631",
-    whatsapp: "+57 311 836 7631",
-    email: "recaudoffc@confederacioncauchera.com",
-    website:
-      "https://www.agrosavia.co/productos-y-servicios/oferta-tecnol%C3%B3gica/l%C3%ADnea-agr%C3%ADcola/cultivos-permanentes/bioproductos/553-erytec-caucho",
+    sellerName: "Karen Arango",
+    role: "Contacto comercial Confecaucho",
+    phone: "+57 317 253 6737",
+    whatsapp: "+57 317 253 6737",
+    email: "karen.arango@confecaucho.com",
   },
 };
 
