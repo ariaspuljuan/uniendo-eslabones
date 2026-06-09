@@ -158,7 +158,7 @@ export default async function ProductDetailPage({
             <h2 className="text-2xl font-black">Contacto comercial</h2>
             <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
               Habla directamente con el proveedor para disponibilidad,
-              cantidades, fichas tecnicas o negociacion.
+              cantidades, fichas técnicas o negociación.
             </p>
 
             <div className="mt-5 space-y-3 text-sm">
@@ -171,9 +171,11 @@ export default async function ProductDetailPage({
               <p>
                 <strong>Teléfono:</strong> {supplier.contact.phone}
               </p>
-              <p>
-                <strong>Correo:</strong> {supplier.contact.email}
-              </p>
+              {supplier.contact.email ? (
+                <p>
+                  <strong>Correo:</strong> {supplier.contact.email}
+                </p>
+              ) : null}
             </div>
 
             <div className="mt-6 grid gap-3">
@@ -193,12 +195,14 @@ export default async function ProductDetailPage({
               >
                 WhatsApp
               </a>
-              <a
-                href={`mailto:${supplier.contact.email}`}
-                className="rounded-2xl bg-[var(--color-accent)] px-5 py-4 text-center text-sm font-black uppercase text-white shadow-lg sm:rounded-md sm:py-3"
-              >
-                Enviar correo
-              </a>
+              {supplier.contact.email ? (
+                <a
+                  href={`mailto:${supplier.contact.email}`}
+                  className="rounded-2xl bg-[var(--color-accent)] px-5 py-4 text-center text-sm font-black uppercase text-white shadow-lg sm:rounded-md sm:py-3"
+                >
+                  Enviar correo
+                </a>
+              ) : null}
             </div>
           </section>
         </aside>

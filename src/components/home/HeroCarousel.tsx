@@ -10,11 +10,11 @@ export const heroSlides = [
   },
   {
     src: "/images/hero-slide-2.png",
-    alt: "Latex y proceso productivo del caucho",
+    alt: "Látex y proceso productivo del caucho",
   },
   {
     src: "/images/hero-slide-3.png",
-    alt: "Industria y transformacion del caucho natural",
+    alt: "Industria y transformación del caucho natural",
   },
 ];
 

@@ -11,27 +11,6 @@ const typeLabels = {
   productivo: "Productivo",
 };
 
-function getAllyTime(joinedAt: string) {
-  const start = new Date(`${joinedAt}T00:00:00`);
-  const now = new Date();
-  const diffDays = Math.max(
-    1,
-    Math.floor((now.getTime() - start.getTime()) / 86400000),
-  );
-
-  if (diffDays >= 365) {
-    const years = Math.floor(diffDays / 365);
-    return `${years} ${years === 1 ? "año" : "años"}`;
-  }
-
-  if (diffDays >= 30) {
-    const months = Math.floor(diffDays / 30);
-    return `${months} ${months === 1 ? "mes" : "meses"}`;
-  }
-
-  return `${diffDays} días`;
-}
-
 export default function GremiosPage() {
   return (
     <main className="bg-[var(--color-bg)] text-[var(--color-text)]">
@@ -69,7 +48,7 @@ export default function GremiosPage() {
             </div>
             <div className="rounded-2xl bg-white/90 p-4 text-[#13233f] shadow-lg">
               <strong className="block text-3xl font-black">6</strong>
-              <span className="text-xs font-bold uppercase">Frentes</span>
+              <span className="text-xs font-bold uppercase">Tipos</span>
             </div>
             <div className="rounded-2xl bg-white/90 p-4 text-[#13233f] shadow-lg">
               <strong className="block text-3xl font-black">360</strong>
@@ -142,15 +121,7 @@ export default function GremiosPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between gap-4 border-t border-[color:var(--color-border)] pt-4 md:flex-col md:items-end md:justify-center md:border-t-0 md:pt-0">
-                  <div className="text-left md:text-right">
-                    <p className="text-xs font-black uppercase tracking-wide text-[var(--color-muted)]">
-                      Como aliado
-                    </p>
-                    <p className="text-lg font-black text-[var(--color-accent)]">
-                      {getAllyTime(ally.joinedAt)}
-                    </p>
-                  </div>
+                <div className="flex items-center justify-end border-t border-[color:var(--color-border)] pt-4 md:border-t-0 md:pt-0">
                   <span className="rounded-full bg-[var(--color-accent)] px-4 py-2 text-sm font-black text-white">
                     Ver perfil
                   </span>

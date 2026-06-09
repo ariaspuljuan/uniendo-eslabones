@@ -9,27 +9,6 @@ type AllyDetailPageProps = {
   }>;
 };
 
-function getAllyTime(joinedAt: string) {
-  const start = new Date(`${joinedAt}T00:00:00`);
-  const now = new Date();
-  const diffDays = Math.max(
-    1,
-    Math.floor((now.getTime() - start.getTime()) / 86400000),
-  );
-
-  if (diffDays >= 365) {
-    const years = Math.floor(diffDays / 365);
-    return `${years} ${years === 1 ? "año" : "años"}`;
-  }
-
-  if (diffDays >= 30) {
-    const months = Math.floor(diffDays / 30);
-    return `${months} ${months === 1 ? "mes" : "meses"}`;
-  }
-
-  return `${diffDays} días`;
-}
-
 export function generateStaticParams() {
   return organizations.map((organization) => ({
     slug: organization.slug,
@@ -99,12 +78,6 @@ export default async function AllyDetailPage({ params }: AllyDetailPageProps) {
                 height={160}
                 className="h-24 w-24 rounded-2xl object-contain"
               />
-              <p className="mt-4 text-xs font-black uppercase tracking-wide text-[var(--color-muted)]">
-                Como aliado
-              </p>
-              <p className="text-2xl font-black text-[var(--color-accent)]">
-                {getAllyTime(ally.joinedAt)}
-              </p>
             </div>
           </div>
         </div>
@@ -118,7 +91,6 @@ export default async function AllyDetailPage({ params }: AllyDetailPageProps) {
               <Info label="Ciudad / alcance" value={ally.city} />
               <Info label="Categoría" value={ally.category} />
               <Info label="Tipo de aliado" value={ally.type} />
-              <Info label="Fecha de vinculación" value={ally.joinedAt} />
             </div>
           </article>
 

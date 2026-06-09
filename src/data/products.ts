@@ -54,7 +54,7 @@ const cauchosEcheverri: Supplier = {
 
 const agrosavia: Supplier = {
   id: "agrosavia",
-  name: "AGROSAVIA",
+  name: "Agrosavia",
   city: "Colombia",
   logo: "/images/logos_aliados/logo-agrosavia.svg",
   banner: "/images/allies/banner-aliados.svg",
@@ -66,6 +66,22 @@ const agrosavia: Supplier = {
     phone: "+57 317 253 6737",
     whatsapp: "+57 317 253 6737",
     email: "karen.arango@confecaucho.com",
+  },
+};
+
+const latexNatural: Supplier = {
+  id: "proveedor-latex-natural",
+  name: "Proveedor de látex natural",
+  city: "Colombia",
+  logo: "/images/suppliers/logo-eslatex.svg",
+  banner: "/images/suppliers/banner-eslatex-products.png",
+  description:
+    "Proveedor de látex natural centrifugado y asesoría técnica para productores del campo vinculados a la cadena del caucho natural.",
+  contact: {
+    sellerName: "Área comercial",
+    role: "Atención a productores",
+    phone: "+57 321 569 3694",
+    whatsapp: "+57 321 569 3694",
   },
 };
 
@@ -232,6 +248,38 @@ export const products: Product[] = [
       "Regiones caucheras de Colombia",
     ],
     supplier: agrosavia,
+  },
+  {
+    id: "6",
+    slug: "latex-natural-centrifugado",
+    name: "Látex natural centrifugado",
+    shortDescription:
+      "Látex natural centrifugado alto amonio, bajo amonio y libre de TMTD con asesoría técnica para productores.",
+    fullDescription:
+      "La empresa ofrece látex natural centrifugado alto amonio, látex natural bajo amonio y látex natural centrifugado libre de TMTD. Además, brinda asesoría técnica a productores del campo vinculados a la cadena del caucho natural.",
+    location: "Colombia",
+    provider: latexNatural.name,
+    category: "agroindustria",
+    isNaturalRubber: true,
+    image: "/images/products/gallery-placeholder-1.svg",
+    gallery: [
+      "/images/products/gallery-placeholder-1.svg",
+      "/images/products/gallery-placeholder-2.svg",
+      "/images/products/gallery-placeholder-3.svg",
+    ],
+    specs: [
+      { label: "Referencia", value: "Alto amonio" },
+      { label: "Referencia", value: "Bajo amonio" },
+      { label: "Referencia", value: "Libre de TMTD" },
+      { label: "Servicio", value: "Asesoría técnica" },
+    ],
+    applications: [
+      "Transformación industrial",
+      "Materia prima natural",
+      "Asesoría a productores",
+      "Cadena del caucho natural",
+    ],
+    supplier: latexNatural,
   },
 ];
 

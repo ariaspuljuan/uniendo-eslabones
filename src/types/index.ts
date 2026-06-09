@@ -5,7 +5,7 @@ export type SupplierContact = {
   role: string;
   phone: string;
   whatsapp: string;
-  email: string;
+  email?: string;
   website?: string;
 };
 
