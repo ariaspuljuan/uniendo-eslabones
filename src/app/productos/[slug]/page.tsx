@@ -142,7 +142,7 @@ export default async function ProductDetailPage({
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {product.specs.map((spec) => (
                 <div
-                  key={spec.label}
+                  key={`${spec.label}-${spec.value}`}
                   className="rounded-xl bg-[var(--color-surface-2)] p-4"
                 >
                   <p className="text-xs font-black uppercase tracking-wide text-[var(--color-accent)]">
@@ -186,7 +186,7 @@ export default async function ProductDetailPage({
                   rel="noreferrer"
                   className="rounded-2xl bg-[var(--color-warning)] px-5 py-4 text-center text-sm font-black uppercase text-[#13233f] shadow-lg sm:rounded-md sm:py-3"
                 >
-                  Comprar con el proveedor
+                  Ir al sitio del proveedor
                 </a>
               ) : null}
               <a

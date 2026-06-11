@@ -69,19 +69,54 @@ const agrosavia: Supplier = {
   },
 };
 
-const latexNatural: Supplier = {
-  id: "proveedor-latex-natural",
-  name: "Proveedor de látex natural",
+const eslatex: Supplier = {
+  id: "eslatex",
+  name: "ESLATEX",
   city: "Colombia",
   logo: "/images/suppliers/logo-eslatex.svg",
   banner: "/images/suppliers/banner-eslatex-products.png",
   description:
     "Proveedor de látex natural centrifugado y asesoría técnica para productores del campo vinculados a la cadena del caucho natural.",
   contact: {
-    sellerName: "Área comercial",
+    sellerName: "Área comercial ESLATEX",
     role: "Atención a productores",
     phone: "+57 321 569 3694",
     whatsapp: "+57 321 569 3694",
+  },
+};
+
+const emprocaucho: Supplier = {
+  id: "emprocaucho-sas",
+  name: "Emprocaucho SAS",
+  city: "Colombia",
+  logo: "/images/suppliers/logo-img-emprocaucho.png",
+  banner: "/images/suppliers/banner-emprocaucho-producto.png",
+  description:
+    "Proveedor colombiano de caucho natural técnicamente especificado, con enfoque en trazabilidad, calidad y suministro para aplicaciones industriales.",
+  contact: {
+    sellerName: "Equipo comercial Emprocaucho SAS",
+    role: "Atención comercial",
+    phone: "+57 313 261 8946",
+    whatsapp: "+57 313 261 8946",
+    email: "emprocauchosas@gmail.com",
+  },
+};
+
+const sltc: Supplier = {
+  id: "sltc",
+  name: "Sociedad Latinoamericana de Tecnología del Caucho (SLTC)",
+  city: "Latinoamérica",
+  logo: "/images/suppliers/logo-producto-sltc.png",
+  banner: "/images/suppliers/banner-producto-sltc.png",
+  description:
+    "Organización sin ánimo de lucro dedicada a fortalecer el desarrollo técnico y sostenible de la industria del caucho en Latinoamérica mediante capacitación, divulgación técnica, networking y cooperación entre empresas, academia e instituciones.",
+  contact: {
+    sellerName: "Ing. Lucian Jiménez",
+    role: "Gerencia SLTC",
+    phone: "+57 319 595 0573",
+    whatsapp: "+57 319 595 0573",
+    email: "gerencia@sltcaucho.org",
+    website: "http://www.sltcaucho.org",
   },
 };
 
@@ -258,12 +293,12 @@ export const products: Product[] = [
     fullDescription:
       "La empresa ofrece látex natural centrifugado alto amonio, látex natural bajo amonio y látex natural centrifugado libre de TMTD. Además, brinda asesoría técnica a productores del campo vinculados a la cadena del caucho natural.",
     location: "Colombia",
-    provider: latexNatural.name,
+    provider: eslatex.name,
     category: "agroindustria",
     isNaturalRubber: true,
-    image: "/images/products/gallery-placeholder-1.svg",
+    image: "/images_products/eslatex-img-producto.png",
     gallery: [
-      "/images/products/gallery-placeholder-1.svg",
+      "/images_products/eslatex-img-producto.png",
       "/images/products/gallery-placeholder-2.svg",
       "/images/products/gallery-placeholder-3.svg",
     ],
@@ -279,7 +314,73 @@ export const products: Product[] = [
       "Asesoría a productores",
       "Cadena del caucho natural",
     ],
-    supplier: latexNatural,
+    supplier: eslatex,
+  },
+  {
+    id: "7",
+    slug: "tsr10",
+    name: "TSR10",
+    shortDescription:
+      "Caucho natural técnicamente especificado para neumáticos, autopartes, calzado y productos industriales.",
+    fullDescription:
+      "TSR 10 (Technically Specified Rubber 10) es un caucho natural técnicamente especificado, procesado bajo estándares internacionales para garantizar calidad, pureza y consistencia. Es ampliamente utilizado en neumáticos, autopartes, calzado y productos industriales, destacándose por su bajo contenido de impurezas, trazabilidad y origen colombiano.",
+    location: "Colombia",
+    provider: emprocaucho.name,
+    category: "agroindustria",
+    isNaturalRubber: true,
+    image: "/images_products/tsr10-img-producto.png",
+    gallery: [
+      "/images_products/tsr10-img-producto.png",
+      "/images/products/gallery-placeholder-1.svg",
+      "/images/products/gallery-placeholder-2.svg",
+    ],
+    specs: [
+      { label: "Referencia", value: "TSR 10" },
+      { label: "Tipo", value: "Caucho natural técnicamente especificado" },
+      { label: "Origen", value: "Colombia" },
+      { label: "Uso", value: "Industrial" },
+    ],
+    applications: [
+      "Neumáticos",
+      "Autopartes",
+      "Calzado",
+      "Productos industriales",
+      "Procesos de transformación del caucho",
+    ],
+    supplier: emprocaucho,
+  },
+  {
+    id: "8",
+    slug: "servicio-sltc",
+    name: "Sociedad Latinoamericana de Tecnología del Caucho (SLTC)",
+    shortDescription:
+      "Formación, capacitación y networking para la industria del caucho en Latinoamérica.",
+    fullDescription:
+      "Organización sin ánimo de lucro dedicada a fortalecer el desarrollo técnico y sostenible de la industria del caucho en Latinoamérica mediante capacitación, divulgación técnica, networking y cooperación entre empresas, academia e instituciones.",
+    location: "Latinoamérica",
+    provider: sltc.name,
+    category: "asociacion",
+    isNaturalRubber: true,
+    image: "/images_products/sltc-img-producto.png",
+    gallery: [
+      "/images_products/sltc-img-producto.png",
+      "/images/products/gallery-placeholder-1.svg",
+      "/images/products/gallery-placeholder-3.svg",
+    ],
+    specs: [
+      { label: "Etiqueta", value: "Formación, Capacitación y Networking" },
+      { label: "Revista", value: "Revista técnica SLTCAUCHO" },
+      { label: "Comunidad", value: "@sltcaucho" },
+      { label: "Afiliación", value: "Gratuita" },
+    ],
+    applications: [
+      "Revista técnica SLTCAUCHO",
+      "Cursos y webinars",
+      "Jornadas técnicas y simposios",
+      "Networking sectorial",
+      "Afiliación gratuita",
+    ],
+    supplier: sltc,
   },
 ];
 
