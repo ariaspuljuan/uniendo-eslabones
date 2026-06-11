@@ -1,7 +1,7 @@
 import { DashboardClient } from "@/components/dashboard/DashboardClient";
 
 export const metadata = {
-  title: "Dashboard de Indicadores del Caucho Natural | Uniendo Eslabones",
+  title: "Indicadores del Caucho Natural | Uniendo Eslabones",
   description:
     "Bitácora de precios, mercado y referencias estratégicas para la cadena del caucho colombiano.",
 };
@@ -19,7 +19,7 @@ export default function DashboardPage() {
               Inteligencia sectorial
             </span>
             <h1 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
-              Dashboard de Indicadores del Caucho Natural
+              Indicadores del Caucho Natural
             </h1>
             <p className="mt-5 max-w-3xl text-lg font-medium leading-8 text-[var(--color-muted)]">
               Bitácora de precios, mercado y referencias estratégicas para la
