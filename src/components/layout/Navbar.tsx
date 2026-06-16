@@ -12,13 +12,13 @@ const navItems = [
   { label: "Aliados", href: "/gremios" },
   { label: "Noticias", href: "/noticias" },
   { label: "Indicadores", href: "/dashboard" },
-  { label: "Admin", href: "/admin" },
 ];
 
 export function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
-  const usesLightHero = pathname === "/admin" || pathname === "/dashboard";
+  const usesLightHero =
+    pathname === "/dashboard" || pathname.startsWith("/gestion-ue");
   const isTransparent = !usesLightHero && !isScrolled;
 
   useEffect(() => {

@@ -28,7 +28,7 @@ export function AdminLoginForm() {
         throw new Error(data.message || "No fue posible ingresar.");
       }
 
-      router.replace(searchParams.get("next") || "/admin");
+      router.replace(searchParams.get("next") || "/gestion-ue");
       router.refresh();
     } catch (loginError) {
       setError(

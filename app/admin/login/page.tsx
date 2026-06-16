@@ -1,1 +1,5 @@
-export { default, metadata } from "@/app/admin/login/page";
+import { notFound } from "next/navigation";
+
+export default function AdminLoginNotFoundPage() {
+  notFound();
+}

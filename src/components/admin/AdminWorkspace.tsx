@@ -176,7 +176,7 @@ export function AdminWorkspace() {
 
   async function logout() {
     await fetch("/api/admin/logout", { method: "POST" });
-    window.location.href = "/admin/login";
+    window.location.href = "/gestion-ue/login";
   }
 
   return (

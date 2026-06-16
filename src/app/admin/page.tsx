@@ -3,7 +3,7 @@ import { AdminWorkspace } from "@/components/admin/AdminWorkspace";
 export const metadata = {
   title: "Administrador | Uniendo Eslabones",
   description:
-    "Modulo de cargue de datos para productos, aliados y noticias de Uniendo Eslabones.",
+    "Módulo de cargue de datos para productos, aliados y noticias de Uniendo Eslabones.",
 };
 
 export default function AdminPage() {
