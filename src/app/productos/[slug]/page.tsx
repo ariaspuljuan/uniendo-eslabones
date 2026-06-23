@@ -42,6 +42,11 @@ export default async function ProductDetailPage({
   }
 
   const supplier = product.supplier;
+  const socialLinks = [
+    { label: "Instagram", href: supplier.contact.instagram },
+    { label: "LinkedIn", href: supplier.contact.linkedin },
+    { label: "YouTube", href: supplier.contact.youtube },
+  ].filter((link): link is { label: string; href: string } => Boolean(link.href));
 
   return (
     <main className="bg-[var(--color-bg-soft)] text-[var(--color-text)]">
@@ -204,6 +209,27 @@ export default async function ProductDetailPage({
                 </a>
               ) : null}
             </div>
+
+            {socialLinks.length > 0 ? (
+              <div className="mt-5 border-t border-[color:var(--color-border)] pt-5">
+                <p className="text-xs font-black uppercase tracking-wide text-[var(--color-muted)]">
+                  Redes sociales
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {socialLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full border border-[color:var(--color-border)] px-3 py-2 text-xs font-black text-[var(--color-accent)] transition hover:bg-[var(--color-accent-soft)]"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : null}
           </section>
         </aside>
       </section>

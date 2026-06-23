@@ -120,6 +120,27 @@ const sltc: Supplier = {
   },
 };
 
+const valex: Supplier = {
+  id: "valex-group-llc",
+  name: "VALEX Group LLC",
+  city: "América",
+  logo: "/images/suppliers/logo-valex.png",
+  banner: "/images/suppliers/banner-productos-valex.png",
+  description:
+    "VALEX Group LLC es una empresa especializada en la distribución de materias primas para la industria del caucho y látex en América. Conecta productores de Latinoamérica, África y Asia con fabricantes en Estados Unidos, Canadá y América Latina, ofreciendo soluciones confiables, soporte técnico y una cadena de suministro eficiente.",
+  contact: {
+    sellerName: "Claudia Guacaneme",
+    role: "Contacto comercial VALEX Group LLC",
+    phone: "+57 320 849 7838",
+    whatsapp: "+57 320 849 7838",
+    email: "claudia@valexgroup.com",
+    website: "https://www.valexgroup.com",
+    instagram: "https://www.instagram.com/valexgroupllc",
+    linkedin: "https://www.linkedin.com/company/valex-group-llc/",
+    youtube: "http://www.youtube.com/@valexgroupllc",
+  },
+};
+
 export const products: Product[] = [
   {
     id: "1",
@@ -381,6 +402,39 @@ export const products: Product[] = [
       "Afiliación gratuita",
     ],
     supplier: sltc,
+  },
+  {
+    id: "9",
+    slug: "materias-primas-valex-group",
+    name: "Materias primas para caucho y látex",
+    shortDescription:
+      "Distribución de materias primas para fabricantes de caucho y látex en Estados Unidos, Canadá y América Latina.",
+    fullDescription:
+      "VALEX Group LLC conecta productores de Latinoamérica, África y Asia con fabricantes en Estados Unidos, Canadá y América Latina. Su operación está enfocada en la distribución de materias primas para la industria del caucho y látex, ofreciendo soluciones confiables, soporte técnico y una cadena de suministro eficiente para compradores industriales.",
+    location: "América",
+    provider: valex.name,
+    category: "industria",
+    isNaturalRubber: true,
+    image: "/images_products/img-producto-valex.png",
+    gallery: [
+      "/images_products/img-producto-valex.png",
+      "/images/products/gallery-placeholder-1.svg",
+      "/images/products/gallery-placeholder-2.svg",
+    ],
+    specs: [
+      { label: "Empresa", value: "Comercializadora internacional" },
+      { label: "Cobertura", value: "Estados Unidos, Canadá y América Latina" },
+      { label: "Origen", value: "Latinoamérica, África y Asia" },
+      { label: "Soporte", value: "Técnico y comercial" },
+    ],
+    applications: [
+      "Materias primas para caucho",
+      "Materias primas para látex",
+      "Fabricantes industriales",
+      "Comercio internacional",
+      "Cadena de suministro",
+    ],
+    supplier: valex,
   },
 ];
 
