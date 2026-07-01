@@ -3,6 +3,8 @@ import Link from "next/link";
 import { products } from "@/data/products";
 
 export function FeaturedProducts() {
+  const featuredProducts = products.slice(-4).reverse();
+
   return (
     <section className="bg-[var(--color-bg)] py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
@@ -24,7 +26,7 @@ export function FeaturedProducts() {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((product) => (
+          {featuredProducts.map((product) => (
             <Link
               key={product.id}
               href={`/productos/${product.slug}`}
