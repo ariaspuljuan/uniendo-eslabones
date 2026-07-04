@@ -116,7 +116,11 @@ export default async function ProductDetailPage({
             />
           </div>
 
-          <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+          <div
+            className={`mt-4 grid gap-2 sm:gap-3 ${
+              product.gallery.length === 4 ? "grid-cols-4" : "grid-cols-3"
+            }`}
+          >
             {product.gallery.map((image, index) => (
               <div
                 key={image}
@@ -173,9 +177,11 @@ export default async function ProductDetailPage({
               <p>
                 <strong>Cargo:</strong> {supplier.contact.role}
               </p>
-              <p>
-                <strong>Teléfono:</strong> {supplier.contact.phone}
-              </p>
+              {supplier.contact.phone ? (
+                <p>
+                  <strong>Teléfono:</strong> {supplier.contact.phone}
+                </p>
+              ) : null}
               {supplier.contact.email ? (
                 <p>
                   <strong>Correo:</strong> {supplier.contact.email}
@@ -194,12 +200,16 @@ export default async function ProductDetailPage({
                   Ir al sitio del proveedor
                 </a>
               ) : null}
-              <a
-                href={`https://wa.me/${supplier.contact.whatsapp.replace(/\D/g, "")}`}
-                className="rounded-2xl bg-[var(--color-highlight)] px-5 py-4 text-center text-sm font-black uppercase text-white shadow-lg sm:rounded-md sm:py-3"
-              >
-                WhatsApp
-              </a>
+              {supplier.contact.whatsapp ? (
+                <a
+                  href={`https://wa.me/${supplier.contact.whatsapp.replace(/\D/g, "")}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl bg-[var(--color-highlight)] px-5 py-4 text-center text-sm font-black uppercase text-white shadow-lg sm:rounded-md sm:py-3"
+                >
+                  WhatsApp
+                </a>
+              ) : null}
               {supplier.contact.email ? (
                 <a
                   href={`mailto:${supplier.contact.email}`}

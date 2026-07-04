@@ -3,8 +3,8 @@ export type ProductCategory = "agroindustria" | "asociacion" | "industria";
 export type SupplierContact = {
   sellerName: string;
   role: string;
-  phone: string;
-  whatsapp: string;
+  phone?: string;
+  whatsapp?: string;
   email?: string;
   website?: string;
   instagram?: string;

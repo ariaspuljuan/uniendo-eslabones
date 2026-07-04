@@ -141,6 +141,21 @@ const valex: Supplier = {
   },
 };
 
+const sellaseg: Supplier = {
+  id: "asellaseg-ingenieria",
+  name: "A'sellaseg Ingeniería S.A.S.",
+  city: "Medellín, Colombia",
+  logo: "/images/suppliers/logo_sellaseg.png",
+  banner: "/images/suppliers/banner_sellaseg.png",
+  description:
+    "Empresa productora y comercializadora de repuestos técnicos para la industria en general. Desde 1994 fabrica piezas especiales bajo muestra o planos en caucho, plástico y acero, con cobertura nacional, personal competente y tecnología orientada a la calidad y la mejora continua.",
+  contact: {
+    sellerName: "José Alejandro García Zapata",
+    role: "Contacto comercial",
+    website: "https://www.asellaseg.com",
+  },
+};
+
 export const products: Product[] = [
   {
     id: "1",
@@ -435,6 +450,40 @@ export const products: Product[] = [
       "Cadena de suministro",
     ],
     supplier: valex,
+  },
+  {
+    id: "10",
+    slug: "sellos-empaques-repuestos-tecnicos-asellaseg",
+    name: "Sellos, empaques y repuestos técnicos",
+    shortDescription:
+      "Piezas especiales y soluciones de sellamiento fabricadas en caucho, plástico y acero para diferentes sectores industriales.",
+    fullDescription:
+      "A'sellaseg Ingeniería S.A.S. es una empresa productora y comercializadora de repuestos técnicos para la industria alimenticia, de bebidas, lácteos, automotriz, transporte, química, farmacéutica, textil, metalmecánica, plástica, eléctrica y papelera, entre otras. Fundada en diciembre de 1994 en Medellín, fabrica piezas especiales bajo muestra o planos en diversos materiales, como caucho, plástico y acero. Cuenta con cobertura nacional, personal competente y tecnología para desarrollar productos de sellamiento de fluidos, empaques y repuestos técnicos, bajo un compromiso permanente con el servicio, la calidad y la mejora continua.",
+    location: "Medellín, Colombia",
+    provider: sellaseg.name,
+    category: "industria",
+    isNaturalRubber: false,
+    image: "/images_products/sellaseg_1_producto.png",
+    gallery: [
+      "/images_products/sellaseg_1_producto.png",
+      "/images_products/sellaseg_2_producto.png",
+      "/images_products/sellaseg_3_producto.png",
+      "/images_products/sellaseg_4_producto.png",
+    ],
+    specs: [
+      { label: "Experiencia", value: "Desde 1994" },
+      { label: "Materiales", value: "Caucho, plástico y acero" },
+      { label: "Fabricación", value: "Bajo muestra o planos" },
+      { label: "Cobertura", value: "Nacional" },
+    ],
+    applications: [
+      "Sellamiento de fluidos",
+      "Empaques industriales",
+      "Repuestos técnicos",
+      "Piezas especiales en caucho y plástico",
+      "Soluciones para procesos industriales",
+    ],
+    supplier: sellaseg,
   },
 ];
 

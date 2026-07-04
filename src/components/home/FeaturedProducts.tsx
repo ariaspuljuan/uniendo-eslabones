@@ -42,7 +42,7 @@ export function FeaturedProducts() {
                 />
                 <div className="image-card-overlay absolute inset-0" />
                 <span className="absolute left-4 top-4 rounded-full bg-[rgba(10,17,16,.78)] px-3 py-1 text-xs font-black uppercase text-white backdrop-blur">
-                  {product.isNaturalRubber ? "Natural" : "Reciclado"}
+                  {product.isNaturalRubber ? "Natural" : "Derivado"}
                 </span>
               </div>
               <div className="flex flex-1 flex-col p-5">
