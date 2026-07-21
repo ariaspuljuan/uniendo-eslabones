@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <link rel="preload" as="image" href="/images/hero-slide-1.png" />
+        <link rel="preload" as="image" href="/images/fondo-hero-new-ue.png" />
         <link
           rel="preload"
           as="image"

@@ -1,7 +1,0 @@
-<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="900" height="620" rx="34" fill="#E8F0FF"/>
-  <path d="M0 440C147 343 291 360 438 421C604 490 723 486 900 391V620H0V440Z" fill="#3365BB"/>
-  <path d="M96 420H560" stroke="#FFB500" stroke-width="42" stroke-linecap="round"/>
-  <circle cx="690" cy="180" r="92" fill="#5DC511"/>
-  <text x="82" y="184" fill="#13233F" font-family="Arial" font-size="56" font-weight="900">Oferta</text>
-</svg>
