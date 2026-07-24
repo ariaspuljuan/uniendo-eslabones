@@ -2,6 +2,22 @@ import type { NewsItem } from "@/types";
 
 export const newsItems: NewsItem[] = [
   {
+    id: "6",
+    type: "anuncio",
+    category: "sector",
+    title: "Primer Encuentro Nacional de Productores de Caucho Natural 2026",
+    summary:
+      "El Plan Nacional de Fomento Cauchero, en articulación con el SENA, invita a productores, aliados y actores de la cadena a participar en este encuentro nacional. Será un espacio para compartir experiencias, fortalecer la articulación gremial y proyectar el futuro sostenible del caucho natural colombiano.",
+    source: "Confecaucho",
+    date: "2026-07-24",
+    image: "/images/news/img-encuentro-caucho-2026_portada.png",
+    banner: "/images/news/img-encuentro-caucho-2026_banner.png",
+    externalUrl: "https://forms.gle/bavejkc3CcCTnhyb7",
+    featured: true,
+    urgent: true,
+    ctaLabel: "Inscríbete aquí",
+  },
+  {
     id: "1",
     type: "anuncio",
     category: "productos",
@@ -14,7 +30,6 @@ export const newsItems: NewsItem[] = [
     banner: "/images/news/img-banner-alerta-guantes.png",
     externalUrl: "/productos",
     featured: true,
-    urgent: true,
     ctaLabel: "Ver productos",
   },
   {
