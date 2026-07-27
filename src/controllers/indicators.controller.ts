@@ -1,6 +1,6 @@
 import { indicatorHistoryMock, indicatorSummaryMock } from "@/data/indicatorMocks";
 import { getRubberPriceByType, getRubberPrices } from "@/services/rubberPrices.service";
-import { getTrmIndicator } from "@/services/trm.service";
+import { getTrmHistory, getTrmIndicator } from "@/services/trm.service";
 import type { CalculatorInput, CalculatorResult } from "@/types/indicators";
 
 const calculatorNote =
@@ -25,7 +25,19 @@ export async function getRubberPriceList() {
 }
 
 export async function getIndicatorsHistory() {
-  return indicatorHistoryMock;
+  const trmHistory = await getTrmHistory();
+  const rubberReference = indicatorHistoryMock.slice(-trmHistory.length);
+
+  return trmHistory.map((point, index) => {
+    const rubberPoint =
+      rubberReference[index] ?? indicatorHistoryMock[index % indicatorHistoryMock.length];
+
+    return {
+      ...rubberPoint,
+      date: point.date,
+      trm: point.value,
+    };
+  });
 }
 
 export async function calculateIndicatorPrice(
