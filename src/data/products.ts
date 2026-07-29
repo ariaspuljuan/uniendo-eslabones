@@ -11,10 +11,10 @@ const disguantes: Supplier = {
   contact: {
     sellerName: "Equipo comercial Disguantes",
     role: "Asesor comercial",
-    phone: "+57 300 000 0000",
-    whatsapp: "+57 300 000 0000",
+    phone: "+57 311 841 4911",
+    whatsapp: "+57 311 841 4911",
     email: "ventas@disguantes.co",
-    website: "https://www.disguantes.co",
+    website: "https://disguantesdecolombia.com/",
   },
 };
 
@@ -29,9 +29,27 @@ const goya: Supplier = {
   contact: {
     sellerName: "Área comercial Industrias Goya",
     role: "Ventas corporativas",
-    phone: "+57 301 000 0000",
-    whatsapp: "+57 301 000 0000",
+    phone: "+57 311 729 8619",
+    whatsapp: "+57 311 729 8619",
     email: "comercial@industriasgoya.co",
+    website: "https://industriasgoya.com/",
+  },
+};
+
+const rubberfit: Supplier = {
+  id: "rubberfit",
+  name: "Rubberfit",
+  city: "Medellín, Colombia",
+  logo: "/images/suppliers/logo-echeverri-productos.png",
+  banner: "/images/suppliers/banner-echeverri-productos.png",
+  description:
+    "Marca enfocada en bandas elásticas deportivas elaboradas con caucho natural para entrenamiento, rehabilitación y acondicionamiento físico.",
+  contact: {
+    sellerName: "Área comercial Rubberfit",
+    role: "Atención comercial",
+    phone: "+57 305 236 6112",
+    whatsapp: "+57 305 236 6112",
+    website: "https://rubberfit.co/",
   },
 };
 
@@ -46,9 +64,9 @@ const cauchosEcheverri: Supplier = {
   contact: {
     sellerName: "Asesor comercial Cauchos Echeverri",
     role: "Atención a empresas",
-    phone: "+57 302 000 0000",
-    whatsapp: "+57 302 000 0000",
-    email: "ventas@cauchosecheverri.co",
+    phone: "+57 316 831 2209",
+    whatsapp: "+57 316 831 2209",
+    website: "https://cauchosecheverri.com/",
   },
 };
 
@@ -230,7 +248,7 @@ export const products: Product[] = [
     fullDescription:
       "Bandas elásticas pensadas para rutinas deportivas, fisioterapia y entrenamiento funcional. Permiten comunicar el potencial del caucho natural en productos de consumo, bienestar y alto movimiento comercial.",
     location: "Medellín, Colombia",
-    provider: "Cauchos Echeverri - Rubberfit",
+    provider: rubberfit.name,
     category: "industria",
     isNaturalRubber: true,
     image: "/images_products/bandas-rubber-fit.png",
@@ -251,7 +269,7 @@ export const products: Product[] = [
       "Acondicionamiento físico",
       "Movilidad y fuerza",
     ],
-    supplier: cauchosEcheverri,
+    supplier: rubberfit,
   },
   {
     id: "4",
