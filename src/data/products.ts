@@ -174,6 +174,25 @@ const sellaseg: Supplier = {
   },
 };
 
+const sempertex: Supplier = {
+  id: "sempertex",
+  name: "Sempertex",
+  city: "Barranquilla, Colombia",
+  logo: "/images/suppliers/logo-sempertex.png",
+  banner: "/images/suppliers/banner-sempertex.png",
+  description:
+    "Empresa colombiana especializada en la fabricación de globos elaborados con látex natural. Es la única marca que fabrica globos de látex en Colombia y cuenta con presencia en mercados internacionales, destacándose por calidad, variedad de colores, tamaños, texturas y diseños.",
+  contact: {
+    sellerName: "Equipo comercial Sempertex",
+    role: "Atención comercial",
+    email: "hola@sempertex.com",
+    website: "https://sempertex.com",
+    catalog: "https://sempertex.com/blogs/catalogo/catalogo-nacional-2026",
+    instagram: "https://www.instagram.com/sempertex/",
+    facebook: "https://www.facebook.com/Sempertex/",
+  },
+};
+
 export const products: Product[] = [
   {
     id: "1",
@@ -502,6 +521,39 @@ export const products: Product[] = [
       "Soluciones para procesos industriales",
     ],
     supplier: sellaseg,
+  },
+  {
+    id: "11",
+    slug: "globos-latex-natural-sempertex",
+    name: "Globos de látex natural Sempertex",
+    shortDescription:
+      "Globos de látex natural para celebraciones, decoración, distribución y clientes corporativos.",
+    fullDescription:
+      "Sempertex fabrica globos de látex natural en Colombia con altos estándares de calidad, variedad de colores, tamaños, texturas y diseños. Su producto destacado está orientado a celebraciones, decoración profesional, distribución y clientes corporativos que buscan una marca colombiana con presencia internacional. La compañía utiliza látex natural colombiano proveniente del árbol del caucho, aportando al desarrollo de comunidades del Bajo Cauca antioqueño y apoyando a familias vinculadas al cultivo y aprovechamiento responsable del caucho natural.",
+    location: "Barranquilla, Colombia",
+    provider: sempertex.name,
+    category: "industria",
+    isNaturalRubber: true,
+    image: "/images_products/img-product-semp-1.png",
+    gallery: [
+      "/images_products/img-product-semp-1.png",
+      "/images_products/img-product-semp-2.png",
+      "/images_products/img-product-semp-3.png",
+    ],
+    specs: [
+      { label: "Material", value: "Látex natural colombiano" },
+      { label: "Producto", value: "Globos para celebración y decoración" },
+      { label: "Mercado", value: "Nacional e internacional" },
+      { label: "Catálogo", value: "Catálogo nacional 2026" },
+    ],
+    applications: [
+      "Celebraciones",
+      "Decoración profesional",
+      "Distribución comercial",
+      "Clientes corporativos",
+      "Eventos y activaciones de marca",
+    ],
+    supplier: sempertex,
   },
 ];
 

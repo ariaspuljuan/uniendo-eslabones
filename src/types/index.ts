@@ -7,7 +7,9 @@ export type SupplierContact = {
   whatsapp?: string;
   email?: string;
   website?: string;
+  catalog?: string;
   instagram?: string;
+  facebook?: string;
   linkedin?: string;
   youtube?: string;
 };

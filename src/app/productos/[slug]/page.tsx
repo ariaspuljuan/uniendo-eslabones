@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ProductImageGallery } from "@/components/products/ProductImageGallery";
 import { getProductBySlug, products } from "@/data/products";
 
 type ProductDetailPageProps = {
@@ -44,6 +45,7 @@ export default async function ProductDetailPage({
   const supplier = product.supplier;
   const socialLinks = [
     { label: "Instagram", href: supplier.contact.instagram },
+    { label: "Facebook", href: supplier.contact.facebook },
     { label: "LinkedIn", href: supplier.contact.linkedin },
     { label: "YouTube", href: supplier.contact.youtube },
   ].filter((link): link is { label: string; href: string } => Boolean(link.href));
@@ -105,38 +107,10 @@ export default async function ProductDetailPage({
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-6 px-5 py-6 sm:px-6 sm:py-10 lg:grid-cols-[1.15fr_.85fr]">
-        <div className="rounded-3xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[var(--shadow-card)] sm:p-5">
-          <div className="relative aspect-square overflow-hidden rounded-2xl bg-[var(--color-surface-2)]">
-            <Image
-              src={product.gallery[0] ?? product.image}
-              alt={product.name}
-              width={900}
-              height={900}
-              className="h-full w-full object-contain p-3 sm:p-6"
-            />
-          </div>
-
-          <div
-            className={`mt-4 grid gap-2 sm:gap-3 ${
-              product.gallery.length === 4 ? "grid-cols-4" : "grid-cols-3"
-            }`}
-          >
-            {product.gallery.map((image, index) => (
-              <div
-                key={image}
-                className="relative aspect-square overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-[var(--color-surface-2)]"
-              >
-                <Image
-                  src={image}
-                  alt={`${product.name} imagen ${index + 1}`}
-                  width={240}
-                  height={240}
-                  className="h-full w-full object-contain p-3"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ProductImageGallery
+          images={product.gallery.length > 0 ? product.gallery : [product.image]}
+          productName={product.name}
+        />
 
         <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
           <section className="rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-card)]">
@@ -198,6 +172,16 @@ export default async function ProductDetailPage({
                   className="rounded-2xl bg-[var(--color-warning)] px-5 py-4 text-center text-sm font-black uppercase text-[#13233f] shadow-lg sm:rounded-md sm:py-3"
                 >
                   Ir al sitio del proveedor
+                </a>
+              ) : null}
+              {supplier.contact.catalog ? (
+                <a
+                  href={supplier.contact.catalog}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface-2)] px-5 py-4 text-center text-sm font-black uppercase text-[var(--color-accent)] shadow-lg sm:rounded-md sm:py-3"
+                >
+                  Ver catálogo
                 </a>
               ) : null}
               {supplier.contact.whatsapp ? (
