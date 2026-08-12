@@ -525,7 +525,7 @@ export const products: Product[] = [
   {
     id: "11",
     slug: "globos-latex-natural-sempertex",
-    name: "Globos de látex natural Sempertex",
+    name: "látex natural Sempertex",
     shortDescription:
       "Globos de látex natural para celebraciones, decoración, distribución y clientes corporativos.",
     fullDescription:
