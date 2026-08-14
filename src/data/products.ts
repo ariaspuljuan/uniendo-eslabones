@@ -176,7 +176,7 @@ const sellaseg: Supplier = {
 
 const sempertex: Supplier = {
   id: "sempertex",
-  name: "Sempertex",
+  name: "Sempertex de Colombia SAS",
   city: "Barranquilla, Colombia",
   logo: "/images/suppliers/logo-sempertex.png",
   banner: "/images/suppliers/banner-sempertex.png",
