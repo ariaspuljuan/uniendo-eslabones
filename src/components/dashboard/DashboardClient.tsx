@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DashboardFilters } from "@/components/dashboard/DashboardFilters";
 import { IndicatorCard } from "@/components/dashboard/IndicatorCard";
 import { MarketSummary } from "@/components/dashboard/MarketSummary";
 import { PriceCalculator } from "@/components/dashboard/PriceCalculator";
@@ -27,7 +26,6 @@ const usd = new Intl.NumberFormat("en-US", {
 export function DashboardClient() {
   const [summary, setSummary] = useState<IndicatorSummary | null>(null);
   const [history, setHistory] = useState<IndicatorHistoryPoint[]>([]);
-  const [filter, setFilter] = useState("7 días");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -107,25 +105,23 @@ export function DashboardClient() {
               <p className="text-xs font-black uppercase tracking-[0.18em] text-[var(--color-accent)]">
                 Tendencia
               </p>
-              <h2 className="mt-2 text-2xl font-black">Mercado semanal</h2>
+              <h2 className="mt-2 text-2xl font-black">Referencias del 15 al 23 de octubre de 2026</h2>
             </div>
-            <DashboardFilters active={filter} onChange={setFilter} />
           </div>
           <RubberChart
-            title={`Comparación TRM vs caucho - ${filter}`}
+            title="Referencias internacionales de caucho (USD/kg)"
             history={history}
             series={[
               { key: "tsr20", label: "TSR20", color: "#3365bb" },
               { key: "latex", label: "Látex", color: "#5dc511" },
               { key: "smr20", label: "SMR20", color: "#ffb500" },
-              { key: "str20", label: "STR20", color: "#0f766e" },
             ]}
           />
         </div>
       </section>
 
       <RubberChart
-        title="Evolución TRM"
+        title="TRM del 15 al 23 de octubre de 2026"
         history={history}
         series={[{ key: "trm", label: "USD/COP", color: "#3365bb" }]}
       />

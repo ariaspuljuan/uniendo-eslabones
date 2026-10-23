@@ -111,8 +111,8 @@ export function PriceCalculator({ summary }: PriceCalculatorProps) {
           className="min-h-12 rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-bg)] px-4 font-black text-[var(--color-text)] outline-none focus:border-[var(--color-accent)]"
         >
           {summary.rubber.map((item) => (
-            <option key={item.type} value={item.type}>
-              {item.type} - USD {item.priceUSDPerKg.toFixed(2)}/kg
+            <option key={item.type} value={item.type} disabled={!item.available}>
+              {item.type}{item.available ? ` - USD ${item.priceUSDPerKg.toFixed(2)}/kg` : " - No disponible"}
             </option>
           ))}
         </select>
@@ -158,6 +158,7 @@ export function PriceCalculator({ summary }: PriceCalculatorProps) {
           />
         </div>
         <p className="mt-4 text-xs leading-5 text-[var(--color-muted)]">
+          Referencia de {selected?.updatedAt}; TRM de {summary.trm.updatedAt}.
           Este cálculo es referencial y no reemplaza acuerdos comerciales,
           costos logísticos, calidad, humedad, transporte ni condiciones
           contractuales.

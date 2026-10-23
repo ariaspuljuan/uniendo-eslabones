@@ -1,6 +1,6 @@
 import { indicatorHistoryMock, indicatorSummaryMock } from "@/data/indicatorMocks";
 import { getRubberPriceByType, getRubberPrices } from "@/services/rubberPrices.service";
-import { getTrmHistory, getTrmIndicator } from "@/services/trm.service";
+import { getTrmIndicator } from "@/services/trm.service";
 import type { CalculatorInput, CalculatorResult } from "@/types/indicators";
 
 const calculatorNote =
@@ -25,19 +25,8 @@ export async function getRubberPriceList() {
 }
 
 export async function getIndicatorsHistory() {
-  const trmHistory = await getTrmHistory();
-  const rubberReference = indicatorHistoryMock.slice(-trmHistory.length);
-
-  return trmHistory.map((point, index) => {
-    const rubberPoint =
-      rubberReference[index] ?? indicatorHistoryMock[index % indicatorHistoryMock.length];
-
-    return {
-      ...rubberPoint,
-      date: point.date,
-      trm: point.value,
-    };
-  });
+  // Snapshot verificado: nunca asignar fechas de TRM en vivo a precios históricos.
+  return indicatorHistoryMock;
 }
 
 export async function calculateIndicatorPrice(
@@ -68,7 +57,7 @@ export async function calculateIndicatorPrice(
     priceCOPPerKg,
     priceCOPPerTon: priceCOPPerKg * 1000,
     valueTotalCOP: quantityKg * priceCOPPerKg,
-    updatedAt: indicatorSummaryMock.updatedAt,
+    updatedAt: rubber.updatedAt,
     note: calculatorNote,
   };
 }

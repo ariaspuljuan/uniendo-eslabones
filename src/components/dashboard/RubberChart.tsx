@@ -2,7 +2,7 @@
 
 import type { IndicatorHistoryPoint } from "@/types/indicators";
 
-type SeriesKey = "trm" | "tsr20" | "latex" | "smr20" | "str20";
+type SeriesKey = "trm" | "tsr20" | "latex" | "smr20";
 
 type RubberChartProps = {
   title: string;
@@ -39,7 +39,7 @@ export function RubberChart({ title, history, series }: RubberChartProps) {
         <div>
           <h2 className="text-2xl font-black">{title}</h2>
           <p className="mt-1 text-sm text-[var(--color-muted)]">
-            Tendencia con datos mock listos para reemplazo por API.
+            Serie verificada de octubre de 2026. Cada línea muestra su tendencia en una escala propia.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -58,6 +58,11 @@ export function RubberChart({ title, history, series }: RubberChartProps) {
         </div>
       </div>
 
+      {series.some((item) => item.key !== "trm") ? (
+        <p className="mt-3 text-xs text-[var(--color-muted)]">
+          STR20: una cotización verificada al 20 de octubre; sin serie suficiente para graficar.
+        </p>
+      ) : null}
       <div className="mt-5 overflow-hidden rounded-2xl bg-[linear-gradient(180deg,var(--color-surface-2),transparent)] p-3">
         <svg
           viewBox={`0 0 ${width} ${height}`}

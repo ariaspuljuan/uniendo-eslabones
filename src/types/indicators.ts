@@ -11,7 +11,7 @@ export type TrmIndicator = {
 export type RubberIndicator = {
   type: RubberType;
   priceUSDPerKg: number;
-  variationPercent: number;
+  variationPercent?: number;
   market: string;
   source: string;
   updatedAt: string;
@@ -30,7 +30,7 @@ export type IndicatorHistoryPoint = {
   tsr20: number;
   latex: number;
   smr20: number;
-  str20: number;
+  str20: number | null;
 };
 
 export type CalculatorInput = {
