@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MalayoProductDetails } from "@/components/products/MalayoProductDetails";
 import { ProductImageGallery } from "@/components/products/ProductImageGallery";
 import { getProductBySlug, products } from "@/data/products";
 
@@ -106,6 +107,10 @@ export default async function ProductDetailPage({
         </div>
       </section>
 
+      {supplier.id === "distribuidor-malayo" ? (
+        <MalayoProductDetails />
+      ) : (
+        <>
       <section className="mx-auto grid max-w-7xl gap-6 px-5 py-6 sm:px-6 sm:py-10 lg:grid-cols-[1.15fr_.85fr]">
         <ProductImageGallery
           images={product.gallery.length > 0 ? product.gallery : [product.image]}
@@ -264,6 +269,8 @@ export default async function ProductDetailPage({
           </div>
         </article>
       </section>
+        </>
+      )}
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import type { Product, Supplier } from "@/types";
+import { distribuidorMalayoProduct } from "@/data/distribuidorMalayo";
 
 const disguantes: Supplier = {
   id: "disguantes",
@@ -194,6 +195,7 @@ const sempertex: Supplier = {
 };
 
 export const products: Product[] = [
+  distribuidorMalayoProduct,
   {
     id: "1",
     slug: "guantes-industriales-latex-natural",
