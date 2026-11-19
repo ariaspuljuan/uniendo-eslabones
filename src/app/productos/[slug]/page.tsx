@@ -11,6 +11,13 @@ type ProductDetailPageProps = {
   }>;
 };
 
+function getWhatsAppLink(phone: string, productName: string) {
+  const normalizedPhone = phone.replace(/\D/g, "");
+  const message = `Hola, vengo de Uniendo Eslabones y quería preguntar por ${productName}.`;
+
+  return `https://wa.me/${normalizedPhone}?text=${encodeURIComponent(message)}`;
+}
+
 export function generateStaticParams() {
   return products.map((product) => ({
     slug: product.slug,
@@ -191,7 +198,7 @@ export default async function ProductDetailPage({
               ) : null}
               {supplier.contact.whatsapp ? (
                 <a
-                  href={`https://wa.me/${supplier.contact.whatsapp.replace(/\D/g, "")}`}
+                  href={getWhatsAppLink(supplier.contact.whatsapp, product.name)}
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-2xl bg-[var(--color-highlight)] px-5 py-4 text-center text-sm font-black uppercase text-white shadow-lg sm:rounded-md sm:py-3"
